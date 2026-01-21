@@ -1,0 +1,14 @@
+.a9ofla {
+  align-items: center;
+  text-align: center;
+  margin: 50px auto;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(90, 47, 168, 0.95);
+  background-color: rgba(122, 74, 226, 0.123);
+  border-radius: 12px;
+  padding: 10px 5px;
+  width: fit-content;
+  display: block;
+  cursor: auto;
+}

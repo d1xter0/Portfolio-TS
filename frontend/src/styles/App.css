@@ -1,0 +1,498 @@
+.line {
+  width: 1500px;
+  height: 1px;
+  background: #7b4ae226;
+  margin: 20px auto;
+}
+
+/* ========= main CSS ========= */
+main {
+  display: flex;
+  gap: 50px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+  margin-bottom: 100px;
+  margin-right: 100px;
+}
+
+.l-read {
+  height: auto;
+  width: 400px;
+  text-align: left;
+  margin-left: 50px;
+}
+
+.l-read h2 {
+  font-size: 36px;
+  font-weight: 1000;
+  margin-bottom: 10px;
+}
+
+.l-read p {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.l-read .sociale {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.l-read svg {
+  color: #ffffff;
+  width: 24px;
+  height: 24px;
+}
+
+.l-read a:hover {
+  transform: translateY(-1px) scale(1.05);
+}
+
+.logo {
+  height: 450px;
+  width: 450px;
+  transition: all 800ms ease;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+.logo:hover {
+  transform: translateY(-0.5px) scale(1.05);
+  box-shadow: 10px 0x 60px rgba(122, 74, 226, 0.212);
+}
+
+.r-read {
+  height: auto;
+  width: 300px;
+  text-align: left;
+  margin-left: 60px;
+}
+
+.r-read h2 {
+  font-size: 36px;
+  font-weight: 1000;
+  margin-bottom: 10px;
+}
+
+.r-read p {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.try {
+  color: var(--btn-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ========= about me CSS ========= */
+.about-me {
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 150px;
+  margin-bottom: 150px;
+}
+
+.about-me img {
+  border-radius: 50%;
+  height: 400px;
+  width: 400px;
+}
+
+.chat {
+  text-align: left;
+  height: auto;
+  width: 700px;
+}
+
+.chat h2 {
+  font-size: 36px;
+  font-weight: 1000;
+  margin-bottom: 20px;
+}
+
+.chat p {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* ========= skills CSS ========= */
+.skills {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.skills h2 {
+  font-size: 36px;
+  font-weight: 1000;
+  margin-bottom: 10px;
+}
+
+.skills .azz {
+  display: inline-flex;
+  gap: 30px;
+}
+
+.azz a {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--btn-color);
+  text-decoration: none;
+  transition:
+    color 300ms ease,
+    transform 300ms ease;
+  margin-bottom: 8px;
+}
+
+.azz a:hover {
+  color: rgba(54, 28, 102, 0.952);
+}
+
+.skills button {
+  color: var(--btn-color);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  padding-bottom: 3px;
+}
+
+.skills svg {
+  margin-bottom: -2px;
+  margin-left: 3px;
+}
+
+.skills p {
+  margin-top: 30px;
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.skills h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-block;
+  padding: 5px 18px;
+  border-radius: 999px;
+  text-align: center;
+  border: 1px solid rgba(123, 74, 226, 0.12);
+}
+
+.skills img {
+  width: 50px;
+  height: 50px;
+  transition:
+    transform 260ms ease,
+    filter 260ms ease;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.skills img:hover {
+  transform: translateY(-6px) scale(1.1);
+  filter: drop-shadow(0 14px 30px rgba(123, 74, 226, 0.2));
+}
+
+/* ========= projects CSS ========= */
+.projects {
+  display: block;
+  margin-bottom: 100px;
+}
+
+.projects h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 36px;
+  font-weight: 1000;
+}
+
+.projects .card-s {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.projects .cent {
+  display: flex;
+  justify-content: center;
+}
+
+.projects button {
+  margin-top: 100px;
+  padding: 10px 16px;
+  border: 1px solid rgb(74, 226, 144);
+  border-radius: 16px;
+  color: rgb(74, 226, 144);
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 400ms ease;
+}
+
+.projects button:hover {
+  border: 1px solid rgba(74, 226, 145, 0.534);
+  color: rgba(74, 226, 145, 0.534);
+}
+
+.projects .pro-img {
+  height: 24px;
+  width: 24px;
+  margin-right: 9px;
+}
+
+.projects .arrow-img {
+  width: 18px;
+  height: 18px;
+  margin-left: 4px;
+  margin-top: 3px;
+}
+
+.projects button:hover img {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(40%) saturate(500%)
+    hue-rotate(90deg) brightness(95%) contrast(90%);
+}
+
+/* ========= career CSS ========= */
+.career {
+  display: block;
+  margin-bottom: 100px;
+}
+
+.career h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 1000;
+  margin-bottom: 80px;
+}
+
+.c-ap {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 450px;
+  margin-right: 450px;
+}
+
+.card-wraper {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-wraper {
+  display: block;
+  text-align: center;
+}
+
+.title-wraper h4 {
+  font-size: 20px;
+  font-weight: 600;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.title-wraper p {
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+/* ========= contact CSS ========= */
+.contact {
+  display: block;
+  margin-bottom: 100px;
+}
+
+.c-gf {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 450px;
+  margin-right: 450px;
+}
+
+.c-gf-wraper {
+  display: block;
+}
+
+.c-gf-title {
+  display: block;
+  text-align: center;
+}
+
+.c-gf-title h2 {
+  font-size: 20px;
+  font-weight: 600;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.c-gf-title p {
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.c-gf-wraper section {
+  border: 1px solid var(--main-color);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.c-gf-wraper a {
+  text-decoration: none;
+}
+
+.c-gf-wraper button {
+  height: 50px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  padding: 0 14px;
+  background: transparent;
+  color: var(--btn-color);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 600ms ease;
+}
+
+.c-gf-wraper button svg:last-child {
+  margin-left: auto;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.c-gf-wraper button:hover svg:last-child {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.c-gf-wraper button:hover {
+  background-color: var(--main-color);
+}
+
+.btn-text {
+  display: block;
+  text-align: left;
+}
+
+.btn-text p {
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 3px;
+}
+
+.time-status {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.time-status button {
+  height: 60px;
+  width: auto;
+  padding: 10px 16px;
+  border: 1px solid rgb(74, 226, 144);
+  border-radius: 10px;
+  color: rgb(74, 226, 144);
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 400ms ease;
+  cursor: default;
+}
+
+.time-status button:hover {
+  border: 1px solid rgba(74, 226, 145, 0.534);
+  color: rgba(74, 226, 145, 0.534);
+}
+
+.azerty {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgb(74, 226, 144);
+  box-shadow: 0 0 4px rgba(74, 226, 144, 0.6);
+  margin-top: 6px;
+}
+
+.azerty::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: rgba(74, 226, 144, 0.35);
+  animation: status-pulse 1.8s ease-out infinite;
+}
+
+.time-status:hover .azerty {
+    animation: pulse-glow 1.8s ease infinite;
+    box-shadow: 
+        0 0 10px rgba(74, 226, 144, 0.8),
+        0 0 20px rgba(74, 226, 144, 0.5),
+        0 0 30px rgba(74, 226, 144, 0.3);
+    color:rgb(74, 226, 144);
+}
+
+@keyframes status-pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.time-status button svg {
+  margin-right: 8px;
+}
+
+.green-wraper {
+  display: flex;
+  gap: 8px;
+}
+
+.clock-time {
+  margin-left: -8px;
+}

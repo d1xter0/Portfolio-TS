@@ -1,0 +1,46 @@
+footer {
+    margin-top: 80px;
+    height: 130px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+h5 {
+    color: var(--btn-color);
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+.btt-s {
+   margin-bottom: -2px;
+   margin-left: 3px;
+}
+
+.line {
+    width: 1500px; height: 1px;
+    background: #7B4AE226;
+    margin: 20px auto;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info h1 {
+    font-size: small;
+    margin-left: 200px;
+}
+
+.info .f-social {
+    direction: none;
+    display: flex;
+    gap: 10px;
+    margin-right: 200px;
+}
+
+.f-social svg {
+    color: #ffffff;
+}

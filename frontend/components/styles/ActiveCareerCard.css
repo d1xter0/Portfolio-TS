@@ -1,0 +1,81 @@
+.active-career-card {
+    display: block;
+    background-color: rgba(74, 226, 144, 0.1);
+    border: 1.35px solid rgb(74, 226, 144);
+    border-radius: 16px;
+    height: auto;
+    width:380px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    transition: all 600ms ease;
+    margin-bottom: 30px;
+}
+
+.active-career-card:hover {
+    border: 1.35px solid rgba(74, 226, 144, 0.1);
+}
+
+
+.active-career-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.active-career-card p {
+    font-size: 13px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.5);
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.active-career-card span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 28px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: right;
+    color: rgb(74, 226, 144);
+    margin-right: 15px;
+}
+
+.active-career-card .cNNLQk {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgb(74, 226, 144);
+  box-shadow: 0 0 4px rgba(74, 226, 144, 0.6);
+  cursor: default;
+  margin-right: 6px;
+}
+
+.active-career-card .cNNLQk::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: rgba(74, 226, 144, 0.35);
+  animation: status-pulse 1.8s ease-out infinite;
+}
+
+@keyframes status-pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
