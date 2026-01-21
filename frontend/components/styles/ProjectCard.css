@@ -73,3 +73,29 @@
   color: rgba(255, 255, 255, 0.5);
   flex-grow: 1;
 }
+
+@media (max-width: 768px) {
+  .project-card {
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .project-image {
+    border-radius: 12px;
+  }
+
+  .project-card .techs {
+    margin: 6px 0;
+  }
+
+  .project-card h3 {
+    font-size: 17px;
+  }
+
+  .project-card p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}

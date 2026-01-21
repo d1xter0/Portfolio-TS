@@ -44,3 +44,37 @@ h5 {
 .f-social svg {
     color: #ffffff;
 }
+
+@media (max-width: 768px) {
+    footer {
+        height: auto;
+        margin-top: 60px;
+        padding: 0 16px 20px;
+    }
+
+    h5 {
+        margin-bottom: 28px;
+        font-size: 13px;
+    }
+
+    .line {
+        width: calc(100% - 32px);
+        margin: 16px auto;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .info h1 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .info .f-social {
+        margin-right: 0;
+        gap: 14px;
+    }
+}

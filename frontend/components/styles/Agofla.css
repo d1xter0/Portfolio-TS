@@ -12,3 +12,12 @@
   display: block;
   cursor: auto;
 }
+
+@media (max-width: 768px) {
+  .a9ofla {
+    margin: 32px auto;
+    max-width: calc(100% - 32px);
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}

@@ -97,3 +97,54 @@ button {
     gap: 10px; 
     align-items: center;
 }
+
+@media (max-width: 768px) {
+    header {
+        height: auto;
+    }
+
+    .head {
+        width: calc(100% - 24px);
+        margin: 0 12px;
+        top: 10px;
+        padding: 0.4rem 0.6rem;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .head-icon img {
+        width: 28px;
+        height: 28px;
+        margin-left: 6px;
+        margin-top: 0;
+    }
+
+    .research-bar {
+        gap: 4px;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        white-space: nowrap;
+    }
+
+    .research-bar .head-btn {
+        display: none;
+    }
+
+    .research-bar .head-btn:nth-of-type(5),
+    .research-bar .head-btn:nth-of-type(6),
+    .research-bar .head-btn:nth-of-type(7) {
+        display: inline-flex;
+    }
+
+    .head button {
+        margin: 2px 2px;
+        padding: 6px 6px;
+        font-size: 11px;
+        min-height: 32px;
+    }
+
+    .status-btn {
+        gap: 6px;
+        font-size: 11px;
+    }
+}

@@ -3,9 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Agofla from "../components/Agofla";
 import ProjectCard from "../components/ProjectCard";
-{
-  /*import CareerCard from "../components/CareerCard";*/
-}
+{/*import CareerCard from "../components/CareerCard";*/}
 import ActiveCareerCard from "../components/ActiveCareerCard";
 
 function App() {
