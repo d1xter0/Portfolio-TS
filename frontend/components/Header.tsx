@@ -5,7 +5,7 @@ function Header() {
         <header id="head">
            <div className="head">
               <div className="head-icon">
-                <img alt='logo-icon' src="../public/avatar-icon.png"></img>
+                <img alt='logo-icon' src="/avatar-icon.png"></img>
               </div>
 
               <div className="research-bar">
