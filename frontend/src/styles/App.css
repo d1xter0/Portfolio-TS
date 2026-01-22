@@ -386,14 +386,15 @@ main {
   margin-left: auto;
   opacity: 0;
   transform: translateX(-6px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
 .c-gf-wraper button:hover svg:last-child {
   opacity: 1;
   transform: translateX(0);
 }
-
 
 .c-gf-wraper button:hover {
   background-color: var(--main-color);
@@ -462,12 +463,12 @@ main {
 }
 
 .time-status:hover .azerty {
-    animation: pulse-glow 1.8s ease infinite;
-    box-shadow: 
-        0 0 10px rgba(74, 226, 144, 0.8),
-        0 0 20px rgba(74, 226, 144, 0.5),
-        0 0 30px rgba(74, 226, 144, 0.3);
-    color:rgb(74, 226, 144);
+  animation: pulse-glow 1.8s ease infinite;
+  box-shadow:
+    0 0 10px rgba(74, 226, 144, 0.8),
+    0 0 20px rgba(74, 226, 144, 0.5),
+    0 0 30px rgba(74, 226, 144, 0.3);
+  color: rgb(74, 226, 144);
 }
 
 @keyframes status-pulse {
