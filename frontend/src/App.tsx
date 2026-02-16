@@ -206,9 +206,9 @@ function App() {
           <ProjectCard
             pic="/bendouha-shop.png"
             title="Bendouha Electric"
-            description="Full-stack e-commerce platform built from scratch for an electrical and LED lighting shop using React, Node.js, Express, and MySQL."
-            techs={["React.js", "Javascript", "Node.js", "MySQL", "Rest API"]}
-            links="https://bendouha.com"
+            description="Designed and developed a full-stack, production-ready e-commerce platform for an electrical and LED lighting business."
+            techs={["React.js", "Typescript", "Nest.js", "PostgreSQL", "Prisma", "REST API", "TailwindCSS"]}
+            links="https://www.bendouha.com"
           />
         </div>
 
