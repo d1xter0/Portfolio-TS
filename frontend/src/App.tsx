@@ -207,7 +207,7 @@ function App() {
             pic="/bendouha-shop.png"
             title="Bendouha Electric"
             description="Designed and developed a full-stack, production-ready e-commerce platform for an electrical and LED lighting business."
-            techs={["React.js", "Typescript", "Nest.js", "PostgreSQL", "Prisma", "REST API", "TailwindCSS"]}
+            techs={["React.js", "Next.js","Typescript", "Nest.js", "PostgreSQL", "Prisma", "REST API", "TailwindCSS"]}
             links="https://www.bendouha.com"
           />
         </div>
