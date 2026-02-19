@@ -1,0 +1,82 @@
+{
+  "header": {
+    "status": "Disponible",
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "career": "Parcours",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "D1XTER0",
+    "subtitle": "Développeur web Full Stack · Passionné de cybersécurité",
+    "why_title": "Pourquoi D1XTER0 ?",
+    "why_description": "Je développe des applications web modernes, évolutives et sécurisées — de l’UI/UX jusqu’au frontend et backend.",
+    "why_link": "applications web"
+  },
+  "agofla": {
+    "about": "🧐 À propos de moi",
+    "skills": "🧑‍💻 Compétences",
+    "projects": "🔗 Projets",
+    "career": "💼 Parcours",
+    "contact": "📬 Contact"
+  },
+  "about": {
+    "name": "Ouassim Sihamda",
+    "description": "Développeur web avec un an d’expérience, titulaire de la certification Cisco Certified Network Associate (CCNA) et étudiant en informatique à l’Université Saad Dahleb de Blida. Toujours motivé à apprendre, progresser et saisir de nouvelles opportunités.",
+    "goal": "Mon objectif est d’élargir continuellement mes connaissances, d’améliorer mes compétences et de me préparer à une carrière en cybersécurité tout en découvrant",
+    "goal_link": "de nouvelles technologies"
+  },
+  "skills": {
+    "title": "Technologies & Compétences",
+    "download_cv": "Télécharger le CV",
+    "description": "Développement d’applications web modernes, évolutives et sécurisées, avec une forte capacité d’analyse et de résolution de problèmes.",
+    "constant_techs": "Technologies que j’utilise régulièrement",
+    "production_techs": "Expérience en environnement de production"
+  },
+  "projects": {
+    "title": "Mes réalisations",
+    "explore_github": "Voir plus de projets sur Github",
+    "portfolio_title": "Portfolio personnel",
+    "portfolio_description": "Un site personnel mettant en avant mes compétences, mes projets et ma vision du développement.",
+    "bendouha_title": "Bendouha Electric",
+    "bendouha_description": "Conception et développement d’une plateforme e-commerce Full Stack prête pour la production, destinée à une entreprise spécialisée en électricité et éclairage LED."
+  },
+  "career": {
+    "title": "Parcours professionnel & académique",
+    "professional": "Professionnel",
+    "professional_period": "2025 · À présent",
+    "academic": "Académique",
+    "academic_period": "2024 · À présent",
+    "card1_title": "Développeur Full Stack Junior | À la recherche d’opportunités",
+    "card1_description": "Développement actif de projets Full Stack concrets et recherche d’un poste junior ou d’un stage afin d’acquérir une expérience professionnelle.",
+    "card1_date": "Déc. 2025 – Présent",
+    "card2_title": "Étudiant en Génie informatique",
+    "card2_description": "Étudiant en première année d’informatique à l’Université Saad Dahleb de Blida, avec une solide base en génie logiciel.",
+    "card2_date": "Oct. 2024 – Présent",
+    "card3_title": "Cisco Certified Network Associate (CCNA)",
+    "card3_description": "Étude approfondie des fondamentaux des réseaux : routage, commutation, adressage IP et sécurité des réseaux.",
+    "card3_date": "Oct. 2025 – Présent"
+  },
+  "contact": {
+    "title": "Me contacter",
+    "subtitle": "Discutons de votre prochain projet",
+    "follow_title": "Me suivre",
+    "follow_subtitle": "Suivez mon parcours professionnel",
+    "email": "E-mail",
+    "discord_dm": "Discord",
+    "whatsapp": "WhatsApp",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "discord_community": "Discord",
+    "discord_community_sub": "Rejoindre la communauté",
+    "github": "GitHub",
+    "fiverr": "Fiverr",
+    "fiverr_sub": "Engagez-moi pour vos projets",
+    "response_time": "Temps de réponse",
+    "response_time_sub": "Réponse sous 24 heures",
+    "status": "Statut",
+    "status_sub": "Disponible pour travailler"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "header": {
+    "status": "Status",
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "career": "Career",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "D1XTER0",
+    "subtitle": "Full Stack Developer · Cybersecurity Enthusiast",
+    "why_title": "Why D1XTER0?",
+    "why_description": "I build modern, scalable, and secure web applications · UI/UX to frontend and backend.",
+    "why_link": "web applications"
+  },
+  "agofla": {
+    "about": "🧐 About Me",
+    "skills": "🧑‍💻 Skills",
+    "projects": "🔗 Projects",
+    "career": "💼 Career",
+    "contact": "📬 Contact"
+  },
+  "about": {
+    "name": "Ouassim Sihamda",
+    "description": "I'm a Web Developer with 1 year of experience. I hold a Cisco Certified Network Associate (CCNA) certification and study Computer Science at Saad Dahleb University of Blida. I'm always eager to learn, grow, and take on new opportunities.",
+    "goal": "My Goal is To continuously expand my knowledge, improve my skills, and prepare for a career in cybersecurity while learning",
+    "goal_link": "new technologies"
+  },
+  "skills": {
+    "title": "Technologies & Skills",
+    "download_cv": "Download CV",
+    "description": "Building modern, scalable, and secure web applications while solving problems.",
+    "constant_techs": "Techs I use constantly",
+    "production_techs": "Production experience"
+  },
+  "projects": {
+    "title": "Things I've Built",
+    "explore_github": "Explore more projects on Github",
+    "portfolio_title": "Personale Portfolio",
+    "portfolio_description": "Personal portfolio showcasing my skills, projects, and development approach.",
+    "bendouha_title": "Bendouha Electric",
+    "bendouha_description": "Designed and developed a full-stack, production-ready e-commerce platform for an electrical and LED lighting business."
+  },
+  "career": {
+    "title": "Career & Learning Journey",
+    "professional": "Professional",
+    "professional_period": "2025 · At the moment",
+    "academic": "Academic",
+    "academic_period": "2024 · At the moment",
+    "card1_title": "Junior Full-Stack Developer | Seeking Opportunities",
+    "card1_description": "Actively building real-world full-stack projects and seeking junior developer or internship opportunities to gain professional experience.",
+    "card1_date": "Dec 2025 – Present",
+    "card2_title": "Computer Science Engineering Student",
+    "card2_description": "First-year Computer Science student at Saad Dahleb University of Blida, building a strong foundation in software engineering.",
+    "card2_date": "Oct 2024 – Present",
+    "card3_title": "Cisco Certified Network Associate",
+    "card3_description": "Studying networking fundamentals including routing, switching, IP addressing, and network security.",
+    "card3_date": "Oct 2025 – Present"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Let's talk about your next project",
+    "follow_title": "Follow Me",
+    "follow_subtitle": "Follow my journey",
+    "email": "Email",
+    "discord_dm": "Discord",
+    "whatsapp": "WhatsApp",
+    "linkedin": "Linkedin",
+    "instagram": "Instagram",
+    "discord_community": "Discord",
+    "discord_community_sub": "Join the community",
+    "github": "Github",
+    "fiverr": "Fiverr",
+    "fiverr_sub": "Hire me for projects",
+    "response_time": "Response Time",
+    "response_time_sub": "Replies within 24 hours",
+    "status": "Status",
+    "status_sub": "Available for work"
+  }
+}

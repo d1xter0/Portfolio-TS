@@ -12,7 +12,7 @@ button {
     margin: 10px;
     cursor: pointer;
     font-weight: 600;
-    margin-right: 20px;
+    margin-inline-end: 20px;
     color: #ffffff;
 }
 
@@ -23,7 +23,6 @@ button {
 
 .status-btn {
     color: rgb(74, 226, 144);
-    opacity: 1;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -54,7 +53,6 @@ button {
         0 0 10px rgba(74, 226, 144, 0.8),
         0 0 20px rgba(74, 226, 144, 0.5),
         0 0 30px rgba(74, 226, 144, 0.3);
-    color:rgb(74, 226, 144);
 }
 
 @keyframes status-pulse {
@@ -78,7 +76,8 @@ button {
     align-items: center; 
     background-color: var(--main-color);
     border-radius: 14px;
-    margin:  2rem 0 0 15rem;
+    margin-block-start: 2rem;
+    margin-inline-start: 15rem;
     width: 75%;
     padding: 0.5rem;
     position: fixed;
@@ -88,7 +87,7 @@ button {
 .head-icon img {
     width: 35px;
     height: 35px;
-    margin-left: 10px;
+    margin-inline-start: 10px;
     margin-top: 5px;
 }
 
@@ -98,53 +97,136 @@ button {
     align-items: center;
 }
 
-@media (max-width: 768px) {
-    header {
-        height: auto;
-    }
+/* ══════════════════════════════════════════
+   Language Switcher
+══════════════════════════════════════════ */
+.lang-switcher-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 13px 6px 10px;
+  border-radius: 999px;
+  background: rgba(122, 74, 226, 0.1);
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(122, 74, 226, 0.3);
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+  white-space: nowrap;
+  line-height: 1;
+  margin: 0;
+}
 
-    .head {
-        width: calc(100% - 24px);
-        margin: 0 12px;
-        top: 10px;
-        padding: 0.4rem 0.6rem;
-        height: auto;
-        border-radius: 12px;
-    }
+.lang-switcher-btn svg {
+  opacity: 0.7;
+  flex-shrink: 0;
+  transition: opacity 0.2s ease;
+}
 
-    .head-icon img {
-        width: 28px;
-        height: 28px;
-        margin-left: 6px;
-        margin-top: 0;
-    }
+.lang-switcher-btn:hover {
+  background: rgba(122, 74, 226, 0.22);
+  border-color: rgba(122, 74, 226, 0.6);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(122, 74, 226, 0.25);
+}
 
-    .research-bar {
-        gap: 4px;
-        flex-wrap: nowrap;
-        justify-content: flex-end;
-        white-space: nowrap;
-    }
+.lang-switcher-btn:hover svg {
+  opacity: 1;
+}
 
-    .research-bar .head-btn {
-        display: none;
-    }
+.lang-switcher-btn[aria-expanded="true"] {
+  background: rgba(122, 74, 226, 0.25);
+  border-color: rgba(122, 74, 226, 0.65);
+  color: #fff;
+  box-shadow: 0 0 16px rgba(122, 74, 226, 0.3);
+}
 
-    .research-bar .head-btn:nth-of-type(5),
-    .research-bar .head-btn:nth-of-type(6),
-    .research-bar .head-btn:nth-of-type(7) {
-        display: inline-flex;
-    }
+/* Dropdown panel */
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  inset-inline-end: 0;
+  min-width: 160px;
+  background: #181530;
+  border-radius: 12px;
+  border: 1px solid rgba(122, 74, 226, 0.2);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  padding: 5px;
+  z-index: 200;
+  animation: lang-drop-in 0.16s cubic-bezier(0.16, 1, 0.3, 1) both;
+  transform-origin: top right;
+}
 
-    .head button {
-        margin: 2px 2px;
-        padding: 6px 6px;
-        font-size: 11px;
-        min-height: 32px;
-    }
+@keyframes lang-drop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
 
-    .status-btn {
-        gap: 6px;
-        font-size: 11px;
-    }
+/* Dropdown items */
+.lang-dropdown-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 9px 11px;
+  border-radius: 8px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-size: 13.5px;
+  font-weight: 500;
+  text-align: start;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+  /* override global button margin */
+  margin: 0;
+}
+
+.lang-dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.lang-dropdown-item.active {
+  background: rgba(122, 74, 226, 0.18);
+  color: #fff;
+  font-weight: 600;
+}
+
+.lang-dropdown-item .lang-name {
+  flex: 1;
+}
+
+/* Check icon inherits color via currentColor */
+.lang-dropdown-item .lang-check {
+  color: rgba(122, 74, 226, 0.95);
+  flex-shrink: 0;
+}
+
+/* Thin divider before the switcher (used in Header) */
+.lang-divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-inline: 6px;
+  flex-shrink: 0;
 }
