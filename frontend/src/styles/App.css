@@ -24,16 +24,27 @@ main {
   margin-left: 50px;
 }
 
+[dir="rtl"] .l-read {
+  text-align: right;
+  margin-left: 0;
+  margin-right: 50px;
+}
+
+[dir="rtl"] main {
+  margin-right: 0;
+  margin-left: 100px;
+}
+
 .l-read h2 {
   font-size: 36px;
   font-weight: 1000;
   margin-bottom: 10px;
 }
-
 .l-read p {
   font-weight: 300;
   font-size: 16px;
   margin-bottom: 20px;
+  word-break: break-word;
 }
 
 .l-read .sociale {
@@ -44,12 +55,16 @@ main {
   transition: all 0.3s ease;
 }
 
+[dir="rtl"] .l-read .sociale {
+  margin-right: 0;
+  margin-left: 15px;
+}
+
 .l-read svg {
   color: #ffffff;
   width: 24px;
   height: 24px;
 }
-
 .l-read a:hover {
   transform: translateY(-1px) scale(1.05);
 }
@@ -61,11 +76,11 @@ main {
   object-fit: cover;
   border-radius: 20px;
   display: block;
+  flex-shrink: 0;
 }
 
 .logo:hover {
   transform: translateY(-0.5px) scale(1.05);
-  box-shadow: 10px 0x 60px rgba(122, 74, 226, 0.212);
 }
 
 .r-read {
@@ -75,16 +90,22 @@ main {
   margin-left: 60px;
 }
 
+[dir="rtl"] .r-read {
+  text-align: right;
+  margin-left: 0;
+  margin-right: 60px;
+}
+
 .r-read h2 {
   font-size: 36px;
   font-weight: 1000;
   margin-bottom: 10px;
 }
-
 .r-read p {
   font-weight: 300;
   font-size: 16px;
   margin-bottom: 20px;
+  word-break: break-word;
 }
 
 .try {
@@ -107,6 +128,7 @@ main {
   border-radius: 50%;
   height: 400px;
   width: 400px;
+  flex-shrink: 0;
 }
 
 .chat {
@@ -114,17 +136,20 @@ main {
   height: auto;
   width: 700px;
 }
-
+[dir="rtl"] .chat {
+  text-align: right;
+}
 .chat h2 {
   font-size: 36px;
   font-weight: 1000;
   margin-bottom: 20px;
 }
-
 .chat p {
   font-weight: 300;
   font-size: 16px;
   margin-bottom: 20px;
+  word-break: break-word;
+  line-height: 1.75;
 }
 
 /* ========= skills CSS ========= */
@@ -132,13 +157,11 @@ main {
   text-align: center;
   margin-bottom: 100px;
 }
-
 .skills h2 {
   font-size: 36px;
   font-weight: 1000;
   margin-bottom: 10px;
 }
-
 .skills .azz {
   display: inline-flex;
   gap: 30px;
@@ -161,7 +184,6 @@ main {
 .azz a:hover {
   color: rgba(54, 28, 102, 0.952);
 }
-
 .skills button {
   color: var(--btn-color);
   cursor: pointer;
@@ -169,17 +191,20 @@ main {
   font-weight: 400;
   padding-bottom: 3px;
 }
-
 .skills svg {
   margin-bottom: -2px;
   margin-left: 3px;
 }
-
+[dir="rtl"] .skills svg {
+  margin-left: 0;
+  margin-right: 3px;
+}
 .skills p {
   margin-top: 30px;
   font-weight: 300;
   font-size: 16px;
   margin-bottom: 20px;
+  word-break: break-word;
 }
 
 .skills h3 {
@@ -214,7 +239,6 @@ main {
   display: block;
   margin-bottom: 100px;
 }
-
 .projects h2 {
   text-align: center;
   margin-bottom: 50px;
@@ -249,6 +273,7 @@ main {
   justify-content: center;
   align-items: center;
   transition: all 400ms ease;
+  gap: 6px;
 }
 
 .projects button:hover {
@@ -261,12 +286,21 @@ main {
   width: 24px;
   margin-right: 9px;
 }
+[dir="rtl"] .projects .pro-img {
+  margin-right: 0;
+  margin-left: 9px;
+}
 
 .projects .arrow-img {
   width: 18px;
   height: 18px;
   margin-left: 4px;
   margin-top: 3px;
+}
+[dir="rtl"] .projects .arrow-img {
+  margin-left: 0;
+  margin-right: 4px;
+  transform: scaleX(-1);
 }
 
 .projects button:hover img {
@@ -279,7 +313,6 @@ main {
   display: block;
   margin-bottom: 100px;
 }
-
 .career h2 {
   text-align: center;
   font-size: 36px;
@@ -299,19 +332,16 @@ main {
   justify-content: center;
   align-items: center;
 }
-
 .title-wraper {
   display: block;
   text-align: center;
 }
-
 .title-wraper h4 {
   font-size: 20px;
   font-weight: 600;
   justify-content: center;
   margin-bottom: 10px;
 }
-
 .title-wraper p {
   font-weight: 400;
   font-size: 14px;
@@ -334,19 +364,16 @@ main {
 .c-gf-wraper {
   display: block;
 }
-
 .c-gf-title {
   display: block;
   text-align: center;
 }
-
 .c-gf-title h2 {
   font-size: 20px;
   font-weight: 600;
   justify-content: center;
   margin-bottom: 10px;
 }
-
 .c-gf-title p {
   font-weight: 400;
   font-size: 14px;
@@ -359,7 +386,6 @@ main {
   border-radius: 16px;
   padding: 16px;
 }
-
 .c-gf-wraper a {
   text-decoration: none;
 }
@@ -382,6 +408,11 @@ main {
   transition: all 600ms ease;
 }
 
+[dir="rtl"] .c-gf-wraper button {
+  direction: rtl;
+  text-align: right;
+}
+
 .c-gf-wraper button svg:last-child {
   margin-left: auto;
   opacity: 0;
@@ -389,13 +420,22 @@ main {
   transition:
     opacity 0.25s ease,
     transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+[dir="rtl"] .c-gf-wraper button svg:last-child {
+  margin-left: 0;
+  margin-right: auto;
+  transform: translateX(6px) scaleX(-1);
 }
 
 .c-gf-wraper button:hover svg:last-child {
   opacity: 1;
   transform: translateX(0);
 }
-
+[dir="rtl"] .c-gf-wraper button:hover svg:last-child {
+  transform: translateX(0) scaleX(-1);
+}
 .c-gf-wraper button:hover {
   background-color: var(--main-color);
 }
@@ -404,12 +444,15 @@ main {
   display: block;
   text-align: left;
 }
-
+[dir="rtl"] .btn-text {
+  text-align: right;
+}
 .btn-text p {
   font-weight: 400;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.5);
   margin-top: 3px;
+  word-break: break-all;
 }
 
 .time-status {
@@ -436,6 +479,7 @@ main {
   align-items: center;
   transition: all 400ms ease;
   cursor: default;
+  white-space: nowrap;
 }
 
 .time-status button:hover {
@@ -451,6 +495,7 @@ main {
   background: rgb(74, 226, 144);
   box-shadow: 0 0 4px rgba(74, 226, 144, 0.6);
   margin-top: 6px;
+  flex-shrink: 0;
 }
 
 .azerty::after {
@@ -468,7 +513,6 @@ main {
     0 0 10px rgba(74, 226, 144, 0.8),
     0 0 20px rgba(74, 226, 144, 0.5),
     0 0 30px rgba(74, 226, 144, 0.3);
-  color: rgb(74, 226, 144);
 }
 
 @keyframes status-pulse {
@@ -487,24 +531,43 @@ main {
 
 .time-status button svg {
   margin-right: 8px;
+  flex-shrink: 0;
+}
+[dir="rtl"] .time-status button svg {
+  margin-right: 0;
+  margin-left: 8px;
 }
 
 .green-wraper {
   display: flex;
   gap: 8px;
+  align-items: center;
 }
-
 .clock-time {
   margin-left: -8px;
 }
+[dir="rtl"] .clock-time {
+  margin-left: 0;
+  margin-right: -8px;
+}
 
+/* ════════════════════════════════════════
+   MOBILE — everything centered, cards full width
+════════════════════════════════════════ */
 @media (max-width: 768px) {
+  /* ── Layout ── */
   main {
     flex-direction: column;
-    align-items: stretch;
-    gap: 28px;
-    margin: 96px 16px 60px;
-    text-align: left;
+    align-items: center;
+    gap: 24px;
+    margin: 90px 16px 60px;
+    text-align: center;
+  }
+
+  [dir="rtl"] main {
+    margin-left: 16px;
+    margin-right: 16px;
+    text-align: center;
   }
 
   .line {
@@ -512,11 +575,18 @@ main {
     margin: 16px auto;
   }
 
+  /* ── Hero ── */
   .l-read,
   .r-read {
     width: 100%;
-    margin-left: 0;
+    margin: 0;
     text-align: center;
+  }
+
+  [dir="rtl"] .l-read,
+  [dir="rtl"] .r-read {
+    text-align: center;
+    margin-left: 60px;
   }
 
   .l-read h2,
@@ -525,56 +595,60 @@ main {
   .skills h2,
   .projects h2,
   .career h2 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .l-read p,
   .r-read p,
   .chat p,
   .skills p {
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 14.5px;
+    line-height: 1.7;
   }
 
   .l-read .sociale {
-    margin-right: 12px;
+    margin: 0 8px;
     padding: 8px;
     border-radius: 10px;
     background: rgba(123, 74, 226, 0.1);
   }
 
+  [dir="rtl"] .l-read .sociale {
+    margin: 0 8px;
+  }
+
   .logo {
-    width: 100%;
-    max-width: 320px;
+    width: min(80vw, 280px);
     height: auto;
     margin: 0 auto;
   }
 
-  .logo img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 20px;
-  }
-
+  /* ── About ── */
   .about-me {
     flex-direction: column;
-    gap: 24px;
-    margin: 70px 16px 90px;
+    align-items: center;
+    gap: 20px;
+    margin: 60px 16px 80px;
   }
 
   .about-me img {
-    width: min(70vw, 240px);
+    width: min(65vw, 200px);
     height: auto;
   }
 
   .chat {
     width: 100%;
     text-align: center;
+    padding: 0 4px;
   }
 
+  [dir="rtl"] .chat {
+    text-align: center;
+  }
+
+  /* ── Skills ── */
   .skills {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     padding: 0 16px;
     text-align: center;
   }
@@ -582,40 +656,37 @@ main {
   .skills .azz {
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
   }
-
   .skills .azz a {
     margin: 0 auto;
   }
 
-  .skills .skills-row {
-    display: flex;
+  .skills-row {
+    display: flex !important;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
     justify-content: center;
   }
 
   .skills img {
-    width: 44px;
-    height: 44px;
-    margin-left: 0;
-    margin-right: 12px;
-    margin-top: 10px;
+    width: 42px;
+    height: 42px;
+    margin: 8px 6px 0;
   }
 
+  /* ── Projects ── */
   .projects {
-    margin-bottom: 80px;
+    margin-bottom: 70px;
     padding: 0 16px;
   }
-
   .projects h2 {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
 
   .projects .card-s {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
     max-width: 100%;
     justify-items: stretch;
   }
@@ -628,101 +699,127 @@ main {
   }
 
   .projects button {
-    width: 100%;
-    max-width: 360px;
-    padding: 12px 14px;
-    border-radius: 14px;
+    width: auto;
+    max-width: 340px;
+    margin-top: 40px;
+    padding: 11px 18px;
+    border-radius: 12px;
     font-size: 13px;
-    text-decoration: none;
+    white-space: normal;
+    text-align: center;
   }
 
+  /* ── Career ── */
   .career {
-    margin-bottom: 80px;
+    margin-bottom: 70px;
+    padding: 0 16px;
   }
-
   .career h2 {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
 
   .c-ap {
     flex-direction: column;
-    gap: 28px;
-    margin: 0 16px;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+    width: 100%;
   }
 
   .card-wraper {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .title-wraper {
     text-align: center;
+    margin-bottom: 0;
   }
-
   .title-wraper h4 {
-    font-size: 18px;
+    font-size: 17px;
   }
-
   .title-wraper p {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
 
+  /* ── Contact ── */
   .contact {
-    margin-bottom: 80px;
+    margin-bottom: 70px;
   }
 
   .c-gf {
     flex-direction: column;
+    align-items: center;
     gap: 28px;
     margin: 0 16px;
   }
 
+  .c-gf-wraper {
+    width: 100%;
+  }
   .c-gf-title {
     text-align: center;
   }
 
   .c-gf-wraper section {
-    padding: 12px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
+    align-items: center;
+    gap: 8px;
   }
 
   .c-gf-wraper a {
     display: block;
     width: 100%;
-    max-width: 360px;
-    margin: 0 auto;
   }
 
   .c-gf-wraper button {
-    width: 95%;
-    min-height: 56px;
+    width: 100%;
+    min-height: 52px;
     height: auto;
-    padding: 12px 14px;
+    padding: 10px 14px;
     justify-content: flex-start;
-    text-align: left;
     gap: 12px;
+  }
+
+  [dir="rtl"] .c-gf-wraper button {
+    justify-content: flex-start;
+    text-align: right;
   }
 
   .c-gf-wraper button svg:last-child {
     display: inline-flex;
-    opacity: 0.5;
+    opacity: 0.4;
     transform: none;
+  }
+  [dir="rtl"] .c-gf-wraper button svg:last-child {
+    transform: scaleX(-1);
   }
 
   .btn-text {
     text-align: left;
   }
+  [dir="rtl"] .btn-text {
+    text-align: right;
+  }
 
+  /* ── Time/Status ── */
   .time-status {
     flex-direction: column;
-    gap: 12px;
-    margin-top: 32px;
+    gap: 10px;
+    margin-top: 28px;
+    padding: 0 16px;
   }
 
   .time-status button {
     width: 100%;
     max-width: 360px;
+    white-space: normal;
+    height: auto;
+    min-height: 56px;
+    padding: 10px 16px;
   }
 }

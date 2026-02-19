@@ -1,66 +1,53 @@
 .career-card {
-    display: block;
-    border: 1px solid var(--main-color);
-    border-radius: 16px;
-    height: auto;
-    width:380px;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    transition: all 600ms ease;
-    margin-bottom: 30px;
-    background: #0b0f1a;
+  display: block;
+  border: 1px solid var(--main-color);
+  border-radius: 16px;
+  height: auto;
+  width: 380px;
+  padding: 7px 12px;
+  transition: all 600ms ease;
+  margin-bottom: 30px;
+  background: #0b0f1a;
 }
 
-.career-card:hover {
-    background-color: var(--main-color);
-}
+.career-card:hover { background-color: var(--main-color); }
 
-
-.career-card h3 {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-.career-card p {
-    font-size: 13px;
-    line-height: 1.4;
-    color: rgba(255, 255, 255, 0.5);
-    flex-grow: 1;
-    margin-bottom: 10px;
-}
+.career-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 5px; word-break: break-word; }
+.career-card p  { font-size: 13px; line-height: 1.6; color: rgba(255,255,255,0.5); flex-grow: 1; margin-bottom: 10px; word-break: break-word; }
 
 .career-card span {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 28px;
-    display: block;
-    -webkit-box-align: center;
-    align-items: center;
-    text-align: right;
-    color: var(--btn-color);
-    margin-right: 15px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 28px;
+  display: block;
+  text-align: right;
+  color: var(--btn-color);
+  margin-right: 15px;
 }
 
+[dir="rtl"] .career-card span { text-align: left; margin-right: 0; margin-left: 15px; }
+
 @media (max-width: 768px) {
-    .career-card {
-        width: 100%;
-        padding: 12px;
-    }
+  .career-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    /* Center inside .card-wraper flex column */
+    align-self: center;
+  }
 
-    .career-card h3 {
-        font-size: 15px;
-    }
+  .career-card h3 { font-size: 15px; }
+  .career-card p  { font-size: 14px; }
 
-    .career-card p {
-        font-size: 14px;
-    }
+  .career-card span {
+    text-align: center;
+    margin-right: 0;
+  }
 
-    .career-card span {
-        text-align: left;
-        margin-right: 0;
-    }
+  [dir="rtl"] .career-card span {
+    text-align: center;
+    margin-left: 0;
+  }
 }

@@ -7,17 +7,23 @@
   color: rgba(90, 47, 168, 0.95);
   background-color: rgba(122, 74, 226, 0.123);
   border-radius: 12px;
-  padding: 10px 5px;
+  padding: 10px 14px;
   width: fit-content;
+  /* Cap width so very long Arabic labels don't overflow */
+  max-width: calc(100% - 32px);
   display: block;
   cursor: auto;
+  /* Never shrink the emoji */
+  white-space: nowrap;
+  word-break: keep-all;
 }
 
 @media (max-width: 768px) {
   .a9ofla {
     margin: 32px auto;
-    max-width: calc(100% - 32px);
     font-size: 13px;
     padding: 8px 12px;
+    white-space: normal;
+    word-break: break-word;
   }
 }

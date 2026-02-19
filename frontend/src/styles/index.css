@@ -8,7 +8,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --font-main: "Manrope", system-ui, -apple-system, BlinkMacSystemFont,sans-serif;
+  --font-main: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-ar: "Cairo", "Noto Sans Arabic", system-ui, sans-serif;
   --main-color: #1c1836;
   --btn-color: rgba(90, 47, 168, 0.95);
   --btn-bg: rgba(122, 74, 226, 0.123);
@@ -32,7 +33,27 @@ html, body {
   overflow-x: hidden;
 }
 
+/* ── Arabic font & RTL ── */
+[lang="ar"],
+[dir="rtl"] {
+  font-family: var(--font-ar);
+  direction: rtl;
+  letter-spacing: 0; /* Arabic doesn't use letter-spacing */
+}
+
+[dir="rtl"] * {
+  font-family: var(--font-ar);
+}
+
+/* Keep code / tech badges in LTR always */
+[dir="rtl"] .techs-btn,
+[dir="rtl"] code,
+[dir="rtl"] pre {
+  direction: ltr;
+  unicode-bidi: embed;
+  font-family: monospace;
+}
+
 ::-webkit-scrollbar-thumb:active {
   background-color: var(--scrollbar-thumb-hover);
 }
-
