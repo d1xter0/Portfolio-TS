@@ -3,13 +3,11 @@ import { initReactI18next } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import en from './locales/en.json'
 import fr from './locales/fr.json'
-import ar from './locales/ar.json'
 
 // Language configuration
 export const languages = [
   { code: 'en', name: 'Anglais', dir: 'ltr' },
   { code: 'fr', name: 'Francais', dir: 'ltr' },
-  { code: 'ar', name: 'Arabic', dir: 'rtl' },
 ] as const
 
 export type LanguageCode = (typeof languages)[number]['code']
@@ -26,7 +24,6 @@ i18n.use(initReactI18next).init({
   resources: {
     en: { translation: en },
     fr: { translation: fr },
-    ar: { translation: ar },
   },
   lng: 'en', // Default language
   fallbackLng: 'en',
