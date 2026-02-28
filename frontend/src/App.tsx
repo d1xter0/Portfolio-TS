@@ -178,6 +178,7 @@ function App() {
 
           <div className="skills-row">
             {/*<img src="/python-icon.svg" alt="python icon"></img>*/}
+            <img src="/postgres-icon.svg" alt="Postgres" />
             <img src="/mysql-icon.svg" alt="MySQL" />
             <img src="/tailwind-icon.svg" alt="Tailwind CSS" />
             <img src="/figma-icon.svg" alt="Figma" />
