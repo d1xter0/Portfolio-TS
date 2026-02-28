@@ -198,7 +198,7 @@ function App() {
             title={t("projects.portfolio_title")}
             description={t("projects.portfolio_description")}
             techs={["React.js", "Typescript"]}
-            links="https://d1xter0.netlify.app/"
+            links="https://d1xter0.vercel.app"
           />
           <ProjectCard
             pic="/bendouha-shop.png"
