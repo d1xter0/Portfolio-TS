@@ -197,7 +197,7 @@ function App() {
             pic="/portfolio.png"
             title={t("projects.portfolio_title")}
             description={t("projects.portfolio_description")}
-            techs={["React.js", "Typescript"]}
+            techs={["React", "Typescript"]}
             links="https://d1xter0.vercel.app"
           />
           <ProjectCard
@@ -220,12 +220,7 @@ function App() {
             pic="/ssp-studio.png"
             title={t("projects.ssp_title")}
             description={t("projects.ssp_description")}
-            techs={[
-              "React",
-              "Next.js",
-              "Typescript",
-              "TailwindCSS",
-            ]}
+            techs={["React", "Next.js", "Typescript", "TailwindCSS"]}
             links="https://ssp-studio.vercel.app/fr"
           />
         </div>
