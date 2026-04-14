@@ -41,7 +41,9 @@
     "portfolio_title": "Portfolio personnel",
     "portfolio_description": "Un site personnel mettant en avant mes compétences, mes projets et ma vision du développement.",
     "bendouha_title": "Bendouha Electric",
-    "bendouha_description": "Conception et développement d’une plateforme e-commerce Full Stack prête pour la production, destinée à une entreprise spécialisée en électricité et éclairage LED."
+    "bendouha_description": "Conception et développement d’une plateforme e-commerce Full Stack prête pour la production, destinée à une entreprise spécialisée en électricité et éclairage LED.",
+    "ssp_title": "SSP Studio",
+    "ssp_description": "Un site web de studio moderne conçu pour mettre en valeur les services, le portefeuille et les demandes des clients, avec un fort accent sur l’expérience utilisateur, la réactivité et la conversion des pistes."
   },
   "career": {
     "title": "Parcours professionnel & académique",
