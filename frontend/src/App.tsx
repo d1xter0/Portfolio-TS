@@ -205,7 +205,7 @@ function App() {
             title={t("projects.bendouha_title")}
             description={t("projects.bendouha_description")}
             techs={[
-              "React.js",
+              "React",
               "Next.js",
               "Typescript",
               "Nest.js",
@@ -215,6 +215,18 @@ function App() {
               "TailwindCSS",
             ]}
             links="https://www.bendouha.com"
+          />
+          <ProjectCard
+            pic="/ssp-studio.png"
+            title={t("projects.ssp_title")}
+            description={t("projects.ssp_description")}
+            techs={[
+              "React",
+              "Next.js",
+              "Typescript",
+              "TailwindCSS",
+            ]}
+            links="https://ssp-studio.vercel.app/fr"
           />
         </div>
 
