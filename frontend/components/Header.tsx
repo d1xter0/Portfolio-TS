@@ -31,7 +31,7 @@ function Header() {
             {t("header.skills")}
           </button>
           <button className="head-btn" onClick={() => scrollTo("Projects")}>
-            {t("header.projects")}
+            {t("header.projects")} 
           </button>
           <button className="head-btn" onClick={() => scrollTo("Career")}>
             {t("header.career")}
