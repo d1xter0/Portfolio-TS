@@ -34,6 +34,19 @@ function App() {
           },
         });
       });
+
+      gsap.from(".skills img", {
+        opacity: 0,
+        scale: 1,
+        stagger: 0.08,
+        duration: 0.5,
+        ease: "back.out(1.7)",
+        clearProps: "all",
+        scrollTrigger: {
+          trigger: ".skills-row",
+          start: "top 95%",
+        },
+      });
     });
 
     return () => animation.revert();
