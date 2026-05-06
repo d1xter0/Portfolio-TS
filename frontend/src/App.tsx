@@ -229,6 +229,7 @@ function App() {
               <img src="/mysql-icon.svg" alt="MySQL" />
               <img src="/tailwind-icon.svg" alt="Tailwind CSS" />
               <img src="/figma-icon.svg" alt="Figma" />
+              <img src="/vercel.svg" alt="Vercel" />
             </div>
           </section>
         </div>
