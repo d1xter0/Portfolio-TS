@@ -269,8 +269,15 @@ function App() {
               pic="/ssp-studio.png"
               title={t("projects.ssp_title")}
               description={t("projects.ssp_description")}
-              techs={["React", "Next.js", "Typescript", "TailwindCSS"]}
+              techs={["React", "Next.js", "Typescript", "TailwindCSS", "Framer Motion"]}
               links="https://www.sspstudio.com"
+            />
+            <ProjectCard
+              pic="/lamsa.png"
+              title={t("projects.lamsa_title")}
+              description={t("projects.lamsa_description")}
+              techs={["React", "Next.js", "Typescript", "TailwindCSS", "Framer Motion"]}
+              links="https://lamsa-communication.vercel.app"
             />
           </div>
 
