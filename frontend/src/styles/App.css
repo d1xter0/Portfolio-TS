@@ -1,38 +1,30 @@
 .line {
-  width: 1500px;
+  width: min(1100px, calc(100% - 48px));
   height: 1px;
   background: #7b4ae226;
   margin: 20px auto;
 }
 
-/* ========= main CSS ========= */
+/* ========= main / hero CSS ========= */
 main {
   display: flex;
   gap: 50px;
   text-align: center;
   align-items: center;
   justify-content: center;
-  margin-top: 70px;
-  margin-bottom: 100px;
-  margin-right: 100px;
+  margin: 48px auto 100px;
+  max-width: 1280px;
+  padding-inline: 24px;
 }
 
 .l-read {
   height: auto;
-  width: 400px;
+  width: min(400px, 100%);
   text-align: left;
-  margin-left: 50px;
 }
 
 [dir="rtl"] .l-read {
   text-align: right;
-  margin-left: 0;
-  margin-right: 50px;
-}
-
-[dir="rtl"] main {
-  margin-right: 0;
-  margin-left: 100px;
 }
 
 .l-read h2 {
@@ -70,8 +62,8 @@ main {
 }
 
 .logo {
-  height: 450px;
-  width: 450px;
+  width: min(450px, 32vw);
+  aspect-ratio: 1;
   transition: all 800ms ease;
   object-fit: cover;
   border-radius: 20px;
@@ -85,15 +77,12 @@ main {
 
 .r-read {
   height: auto;
-  width: 300px;
+  width: min(300px, 100%);
   text-align: left;
-  margin-left: 60px;
 }
 
 [dir="rtl"] .r-read {
   text-align: right;
-  margin-left: 0;
-  margin-right: 60px;
 }
 
 .r-read h2 {
@@ -135,7 +124,9 @@ main {
 .chat {
   text-align: left;
   height: auto;
-  width: 700px;
+  flex: 1;
+  min-width: 0;
+  max-width: 680px;
 }
 [dir="rtl"] .chat {
   text-align: right;
@@ -157,6 +148,7 @@ main {
 .skills {
   text-align: center;
   margin-bottom: 100px;
+  padding-inline: 24px;
 }
 .skills h2 {
   font-size: 36px;
@@ -239,6 +231,7 @@ main {
 .projects {
   display: block;
   margin-bottom: 100px;
+  padding-inline: 24px;
 }
 .projects h2 {
   text-align: center;
@@ -324,8 +317,10 @@ main {
 .c-ap {
   display: flex;
   justify-content: space-between;
-  margin-left: 450px;
-  margin-right: 450px;
+  gap: 40px;
+  max-width: 900px;
+  width: calc(100% - 48px);
+  margin-inline: auto;
 }
 
 .card-wraper {
@@ -358,8 +353,10 @@ main {
 .c-gf {
   display: flex;
   justify-content: space-between;
-  margin-left: 450px;
-  margin-right: 450px;
+  gap: 40px;
+  max-width: 900px;
+  width: calc(100% - 48px);
+  margin-inline: auto;
 }
 
 .c-gf-wraper {
@@ -561,13 +558,9 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    margin: 90px 16px 60px;
-    text-align: center;
-  }
-
-  [dir="rtl"] main {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin: 32px 16px 60px;
+    max-width: none;
+    padding-inline: 0;
     text-align: center;
   }
 
@@ -587,7 +580,7 @@ main {
   [dir="rtl"] .l-read,
   [dir="rtl"] .r-read {
     text-align: center;
-    margin-left: 60px;
+    margin: 0;
   }
 
   .l-read h2,
@@ -620,7 +613,7 @@ main {
 
   .logo {
     width: min(80vw, 280px);
-    height: auto;
+    aspect-ratio: 1;
     margin: 0 auto;
   }
 
@@ -639,6 +632,7 @@ main {
 
   .chat {
     width: 100%;
+    max-width: none;
     text-align: center;
     padding: 0 4px;
   }
@@ -725,6 +719,7 @@ main {
     gap: 0;
     margin: 0;
     width: 100%;
+    max-width: none;
   }
 
   .card-wraper {
@@ -755,6 +750,8 @@ main {
     align-items: center;
     gap: 28px;
     margin: 0 16px;
+    width: auto;
+    max-width: none;
   }
 
   .c-gf-wraper {

@@ -54,9 +54,7 @@ function App() {
 
   return (
     <>
-      <section className="gsap-section">
-        <Header />
-      </section>
+      <Header />
 
       <section className="gsap-section">
         <div>
