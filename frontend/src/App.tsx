@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Agofla from "../components/Agofla";
 import ProjectCard from "../components/ProjectCard";
 import ActiveCareerCard from "../components/ActiveCareerCard";
+import DevTerminal from "../components/DevTerminal";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -131,7 +132,7 @@ function App() {
           </div>
 
           <div className="about-me">
-            <img alt="Ouassim Sihamda profile photo" src="hero-avatar-2.svg" />
+            <DevTerminal />
             <div className="chat">
               <h2 id="about-heading">{t("about.name")}</h2>
               <p>
