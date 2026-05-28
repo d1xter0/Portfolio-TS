@@ -19,7 +19,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 28px;
+  line-height: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -35,7 +35,7 @@
   flex-direction: row-reverse;
 }
 
-.active-career-card .cNNLQk {
+.active-career-card .status-dot {
   position: relative;
   width: 7px; height: 7px;
   border-radius: 50%;
@@ -45,7 +45,7 @@
   flex-shrink: 0;
 }
 
-.active-career-card .cNNLQk::after {
+.active-career-card .status-dot::after {
   content: "";
   position: absolute;
   inset: -4px;

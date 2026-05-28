@@ -31,7 +31,7 @@ function Header() {
 
         <div className="research-bar">
           <button className="status-btn" onClick={() => scrollTo("Career")}>
-            <div className="cNNLQk" />
+            <div className="status-dot" />
             {t("header.status")}
           </button>
 

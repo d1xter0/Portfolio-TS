@@ -11,11 +11,11 @@
   --font-main: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-ar: "Cairo", "Noto Sans Arabic", system-ui, sans-serif;
   --main-color: #1c1836;
-  --btn-color: rgba(90, 47, 168, 0.95);
-  --btn-bg: rgba(122, 74, 226, 0.123);
+  --btn-color: #a78bfa;
+  --btn-bg: rgba(122, 74, 226, 0.15);
   --scrollbar-track: #0c0f17;
-  --scrollbar-thumb: rgba(90, 47, 168, 0.95);
-  --scrollbar-thumb-hover: rgba(122, 74, 226, 0.123);
+  --scrollbar-thumb: rgba(122, 74, 226, 0.55);
+  --scrollbar-thumb-hover: rgba(122, 74, 226, 0.3);
 }
 
 * {
@@ -28,9 +28,30 @@
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
-html, body {
+span {
+  text-decoration: none;
+}
+
+html {
+  overflow-x: clip;
+  scroll-padding-top: 90px;
+}
+
+body {
   color: #fff;
-  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 80px;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 /* ── Arabic font & RTL ── */

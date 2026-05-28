@@ -32,6 +32,7 @@
     "title": "Technologies & Skills",
     "download_cv": "Download CV",
     "description": "Building modern, scalable, and secure web applications while solving problems.",
+    "solving_link": "solving problems",
     "constant_techs": "Techs I use constantly",
     "production_techs": "Production experience"
   },
@@ -55,12 +56,12 @@
     "academic_period": "2024 · At the moment",
     "card1_title": "Junior Full-Stack Developer | Seeking Opportunities",
     "card1_description": "Actively building real-world full-stack projects and seeking junior developer or internship opportunities to gain professional experience.",
-    "card1_date": "Dec 2025 – Present",
+    "card1_date": "Jan 2026 – Present",
     "card2_title": "Computer Science Engineering Student",
     "card2_description": "First-year Computer Science student at Saad Dahleb University of Blida, building a strong foundation in software engineering.",
     "card2_date": "Oct 2024 – Present",
     "card3_title": "Cisco Certified Network Associate",
-    "card3_description": "Studying networking fundamentals including routing, switching, IP addressing, and network security.",
+    "card3_description": "Studying networking fundamentals, and network security.",
     "card3_date": "Oct 2025 – Present"
   },
   "contact": {

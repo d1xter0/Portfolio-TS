@@ -5,7 +5,7 @@ type AgoflaType = {
 };
 
 function Agofla({ text }: AgoflaType) {
-    return <button className='a9ofla'>{text}</button>
+    return <div className='a9ofla' aria-hidden="true">{text}</div>
 }
 
 export default Agofla;

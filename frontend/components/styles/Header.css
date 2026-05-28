@@ -17,11 +17,15 @@ header * {
 button {
   background-color: transparent;
   border: none;
-  margin: 10px;
   cursor: pointer;
   font-weight: 600;
-  margin-inline-end: 20px;
   color: #ffffff;
+}
+
+button:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .head-btn:hover {
@@ -38,7 +42,7 @@ button {
   white-space: nowrap;
 }
 
-.cNNLQk {
+.status-dot {
   position: relative;
   width: 7px;
   height: 7px;
@@ -48,7 +52,7 @@ button {
   flex-shrink: 0;
 }
 
-.cNNLQk::after {
+.status-dot::after {
   content: "";
   position: absolute;
   inset: -4px;
@@ -57,7 +61,7 @@ button {
   animation: status-pulse 1.8s ease-out infinite;
 }
 
-.head:hover .cNNLQk {
+.head:hover .status-dot {
   animation: pulse-glow 1.8s ease infinite;
   box-shadow:
     0 0 10px rgba(74, 226, 144, 0.8),

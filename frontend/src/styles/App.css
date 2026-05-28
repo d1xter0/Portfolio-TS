@@ -2,36 +2,33 @@
   width: min(1100px, calc(100% - 48px));
   height: 1px;
   background: #7b4ae226;
-  margin: 20px auto;
+  margin: 40px auto;
 }
 
 /* ========= main / hero CSS ========= */
-main {
+.hero-layout {
   display: flex;
   gap: 50px;
-  text-align: center;
   align-items: center;
   justify-content: center;
-  margin: 48px auto 100px;
+  margin: 80px auto 130px;
   max-width: 1280px;
   padding-inline: 24px;
 }
 
 .l-read {
   height: auto;
-  width: min(400px, 100%);
+  flex: 1;
+  max-width: 350px;
   text-align: left;
 }
 
-[dir="rtl"] .l-read {
-  text-align: right;
-}
-
-.l-read h2 {
+.l-read h1 {
   font-size: 36px;
   font-weight: 1000;
   margin-bottom: 10px;
 }
+
 .l-read p {
   font-weight: 300;
   font-size: 16px;
@@ -57,6 +54,7 @@ main {
   width: 24px;
   height: 24px;
 }
+
 .l-read a:hover {
   transform: translateY(-1px) scale(1.05);
 }
@@ -77,10 +75,12 @@ main {
 
 .r-read {
   height: auto;
-  width: min(300px, 100%);
+  flex: 1;
+  max-width: 350px;
   text-align: left;
 }
 
+[dir="rtl"] .l-read,
 [dir="rtl"] .r-read {
   text-align: right;
 }
@@ -104,13 +104,17 @@ main {
   cursor: pointer;
 }
 
+.try:hover {
+  color: #c4b5fd;
+}
+
 /* ========= about me CSS ========= */
 .about-me {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 64px;
-  margin: 64px auto 96px;
+  margin: 80px auto 120px;
   width: min(1100px, 92%);
 }
 
@@ -128,39 +132,46 @@ main {
   min-width: 0;
   max-width: 680px;
 }
+
 [dir="rtl"] .chat {
   text-align: right;
 }
+
 .chat h2 {
   font-size: 36px;
   font-weight: 1000;
   margin-bottom: 20px;
 }
+
 .chat p {
   font-weight: 300;
   font-size: 16px;
   margin-bottom: 20px;
   word-break: break-word;
   line-height: 1.75;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 /* ========= skills CSS ========= */
 .skills {
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 140px;
   padding-inline: 24px;
 }
+
 .skills h2 {
   font-size: 36px;
   font-weight: 1000;
   margin-bottom: 10px;
 }
-.skills .azz {
+
+.skills-header {
   display: inline-flex;
   gap: 30px;
+  align-items: center;
 }
 
-.azz a {
+.skills-header a {
   display: inline-flex;
   align-items: center;
   gap: 3px;
@@ -174,30 +185,17 @@ main {
   margin-bottom: 8px;
 }
 
-.azz a:hover {
-  color: rgba(54, 28, 102, 0.952);
+.skills-header a:hover {
+  color: #c4b5fd;
 }
-.skills button {
-  color: var(--btn-color);
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 400;
-  padding-bottom: 3px;
-}
-.skills svg {
-  margin-bottom: -2px;
-  margin-left: 3px;
-}
-[dir="rtl"] .skills svg {
-  margin-left: 0;
-  margin-right: 3px;
-}
+
 .skills p {
   margin-top: 30px;
   font-weight: 300;
   font-size: 16px;
   margin-bottom: 20px;
   word-break: break-word;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .skills h3 {
@@ -209,7 +207,7 @@ main {
   padding: 5px 18px;
   border-radius: 999px;
   text-align: center;
-  border: 1px solid rgba(123, 74, 226, 0.12);
+  border: 1px solid rgba(123, 74, 226, 0.18);
 }
 
 .skills img {
@@ -230,9 +228,10 @@ main {
 /* ========= projects CSS ========= */
 .projects {
   display: block;
-  margin-bottom: 100px;
+  margin-bottom: 140px;
   padding-inline: 24px;
 }
+
 .projects h2 {
   text-align: center;
   margin-bottom: 50px;
@@ -280,6 +279,7 @@ main {
   width: 24px;
   margin-right: 9px;
 }
+
 [dir="rtl"] .projects .pro-img {
   margin-right: 0;
   margin-left: 9px;
@@ -291,6 +291,7 @@ main {
   margin-left: 4px;
   margin-top: 3px;
 }
+
 [dir="rtl"] .projects .arrow-img {
   margin-left: 0;
   margin-right: 4px;
@@ -305,8 +306,9 @@ main {
 /* ========= career CSS ========= */
 .career {
   display: block;
-  margin-bottom: 100px;
+  margin-bottom: 140px;
 }
+
 .career h2 {
   text-align: center;
   font-size: 36px;
@@ -328,26 +330,30 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 .title-wraper {
   display: block;
   text-align: center;
 }
+
 .title-wraper h4 {
   font-size: 20px;
   font-weight: 600;
   justify-content: center;
   margin-bottom: 10px;
 }
+
 .title-wraper p {
   font-weight: 400;
   font-size: 14px;
   margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.65);
 }
 
 /* ========= contact CSS ========= */
 .contact {
   display: block;
-  margin-bottom: 100px;
+  margin-bottom: 140px;
 }
 
 .c-gf {
@@ -362,28 +368,35 @@ main {
 .c-gf-wraper {
   display: block;
 }
+
 .c-gf-title {
   display: block;
   text-align: center;
 }
+
 .c-gf-title h2 {
   font-size: 20px;
   font-weight: 600;
   justify-content: center;
   margin-bottom: 10px;
 }
+
 .c-gf-title p {
   font-weight: 400;
   font-size: 14px;
   margin-bottom: 40px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .c-gf-wraper section {
   border: 1px solid var(--main-color);
   border-radius: 16px;
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
+
 .c-gf-wraper a {
   text-decoration: none;
 }
@@ -431,9 +444,11 @@ main {
   opacity: 1;
   transform: translateX(0);
 }
+
 [dir="rtl"] .c-gf-wraper button:hover svg:last-child {
   transform: translateX(0) scaleX(-1);
 }
+
 .c-gf-wraper button:hover {
   background-color: var(--main-color);
 }
@@ -442,9 +457,11 @@ main {
   display: block;
   text-align: left;
 }
+
 [dir="rtl"] .btn-text {
   text-align: right;
 }
+
 .btn-text p {
   font-weight: 400;
   font-size: 12px;
@@ -480,23 +497,22 @@ main {
   white-space: nowrap;
 }
 
-.time-status button:hover {
-  border: 1px solid rgba(74, 226, 145, 0.534);
-  color: rgba(74, 226, 145, 0.534);
+.time-status button:disabled {
+  cursor: default;
+  pointer-events: none;
 }
 
-.azerty {
+.status-dot {
   position: relative;
   width: 7px;
   height: 7px;
   border-radius: 50%;
   background: rgb(74, 226, 144);
   box-shadow: 0 0 4px rgba(74, 226, 144, 0.6);
-  margin-top: 6px;
   flex-shrink: 0;
 }
 
-.azerty::after {
+.status-dot::after {
   content: "";
   position: absolute;
   inset: -4px;
@@ -505,7 +521,7 @@ main {
   animation: status-pulse 1.8s ease-out infinite;
 }
 
-.time-status:hover .azerty {
+.time-status:hover .status-dot {
   animation: pulse-glow 1.8s ease infinite;
   box-shadow:
     0 0 10px rgba(74, 226, 144, 0.8),
@@ -528,12 +544,7 @@ main {
 }
 
 .time-status button svg {
-  margin-right: 8px;
   flex-shrink: 0;
-}
-[dir="rtl"] .time-status button svg {
-  margin-right: 0;
-  margin-left: 8px;
 }
 
 .green-wraper {
@@ -541,20 +552,13 @@ main {
   gap: 8px;
   align-items: center;
 }
-.clock-time {
-  margin-left: -8px;
-}
-[dir="rtl"] .clock-time {
-  margin-left: 0;
-  margin-right: -8px;
-}
 
 /* ════════════════════════════════════════
    MOBILE — everything centered, cards full width
 ════════════════════════════════════════ */
 @media (max-width: 768px) {
   /* ── Layout ── */
-  main {
+  .hero-layout {
     flex-direction: column;
     align-items: center;
     gap: 24px;
@@ -577,13 +581,7 @@ main {
     text-align: center;
   }
 
-  [dir="rtl"] .l-read,
-  [dir="rtl"] .r-read {
-    text-align: center;
-    margin: 0;
-  }
-
-  .l-read h2,
+  .l-read h1,
   .r-read h2,
   .chat h2,
   .skills h2,
@@ -648,12 +646,13 @@ main {
     text-align: center;
   }
 
-  .skills .azz {
+  .skills-header {
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
-  .skills .azz a {
+
+  .skills-header a {
     margin: 0 auto;
   }
 
@@ -675,6 +674,7 @@ main {
     margin-bottom: 70px;
     padding: 0 16px;
   }
+
   .projects h2 {
     margin-bottom: 24px;
   }
@@ -709,6 +709,7 @@ main {
     margin-bottom: 70px;
     padding: 0 16px;
   }
+
   .career h2 {
     margin-bottom: 32px;
   }
@@ -733,9 +734,11 @@ main {
     text-align: center;
     margin-bottom: 0;
   }
+
   .title-wraper h4 {
     font-size: 17px;
   }
+
   .title-wraper p {
     margin-bottom: 16px;
   }
@@ -757,15 +760,13 @@ main {
   .c-gf-wraper {
     width: 100%;
   }
+
   .c-gf-title {
     text-align: center;
   }
 
   .c-gf-wraper section {
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 8px;
   }
 
@@ -793,6 +794,7 @@ main {
     opacity: 0.4;
     transform: none;
   }
+
   [dir="rtl"] .c-gf-wraper button svg:last-child {
     transform: scaleX(-1);
   }
@@ -800,6 +802,7 @@ main {
   .btn-text {
     text-align: left;
   }
+
   [dir="rtl"] .btn-text {
     text-align: right;
   }

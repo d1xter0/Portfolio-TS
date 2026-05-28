@@ -3,13 +3,7 @@ import "./styles/Footer.css";
 function Footer() {
   return (
     <footer>
-      <h5
-        onClick={() =>
-          document
-            .getElementById("head")
-            ?.scrollIntoView({ behavior: "smooth" })
-        }
-      >
+      <h5 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
         BACK TO HOME
         <svg
           className="btt-s"
@@ -19,7 +13,7 @@ function Footer() {
           fill="currentColor"
           viewBox="0 0 256 256"
         >
-          <rect width="256" height="256" fill="none"></rect>
+          <rect width="256" height="256" fill="none" />
           <line
             x1="128"
             y1="216"
@@ -27,32 +21,32 @@ function Footer() {
             y2="40"
             fill="none"
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="16"
-          ></line>
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="16"
+          />
           <polyline
             points="56 112 128 40 200 112"
             fill="none"
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="16"
-          ></polyline>
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="16"
+          />
         </svg>
       </h5>
 
       <div className="line"></div>
 
       <div className="info">
-        <h1 className="f-h1">COPYRIGHT © D1XTER0 · 2025</h1>
+        <p className="f-copyright">COPYRIGHT © D1XTER0 · 2026</p>
         <div className="f-social">
           <a
             className="f-icon"
             href="https://api.whatsapp.com/send/?phone=213792677951"
             target="_blank"
-            rel="noopener"
-            aria-label="Linkedin"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +62,7 @@ function Footer() {
             className="f-icon"
             href="https://www.linkedin.com/in/ouassim-sihamda/"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             aria-label="Linkedin"
           >
             <svg
@@ -87,7 +81,7 @@ function Footer() {
             className="f-icon"
             href="https://github.com/d1xter0"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             aria-label="GitHub"
           >
             <svg
@@ -106,7 +100,7 @@ function Footer() {
             className="f-icon"
             href="https://discord.com/users/473053118481825792"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             aria-label="Discord"
           >
             <svg
@@ -125,7 +119,7 @@ function Footer() {
             className="f-icon"
             href="https://www.instagram.com/wassim_sihamda/"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             aria-label="Instagram"
           >
             <svg

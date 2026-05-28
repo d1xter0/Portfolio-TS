@@ -11,7 +11,7 @@ function ActiveCareerCard({title, description, date}: CardType) {
        <div className='active-career-card'>
           <h3>{title}</h3>
           <p>{description}</p>
-          <span><div className="cNNLQk"></div> {date}</span>
+          <span><div className="status-dot" aria-hidden="true"></div> {date}</span>
        </div>
    );
 }
