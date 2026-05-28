@@ -13,13 +13,13 @@ interface Cmd {
 }
 
 const COMMANDS: Cmd[] = [
-  { cmd: "ssh root@d1xter0.io -i ~/.ssh/id_ed25519",  result: "... [Connected]",      color: "#4ade80" },
-  { cmd: "git push origin main --force-with-lease",   result: "... [Rejected]",        color: "#f87171" },
-  { cmd: "git pull --rebase origin main",             result: "... [OK]",              color: "#fbbf24" },
-  { cmd: "git push origin main --force-with-lease",   result: "... [Deployed]",        color: "#4ade80" },
-  { cmd: "docker build -t d1xter0/api:latest .",      result: "... [Image Ready]",     color: "#38bdf8" },
-  { cmd: "openssl verify -CAfile chain.pem cert.pem", result: "... [Authorized]",      color: "#4ade80" },
-  { cmd: "node server.js --secure",                   result: "... [Port 443 Active]", color: "#a78bfa" },
+  { cmd: "ssh root@d1xter0.io -i ~/.ssh/id_ed25519",  result: "... [Connected]",       color: "#32383f" },
+  { cmd: "git push origin main --force-with-lease",   result: "... [Rejected]",         color: "#a11e1e" },
+  { cmd: "git pull --rebase origin main",             result: "... [OK]",               color: "#32383f" }, 
+  { cmd: "git push origin main --force-with-lease",   result: "... [Deployed]",         color: "#0b3119e1" }, 
+  { cmd: "docker build -t d1xter0/api:latest .",      result: "... [Image Ready]",      color: "#32383f" },
+  { cmd: "openssl verify -CAfile chain.pem cert.pem", result: "... [Authorized]",       color: "#32383f" }, 
+  { cmd: "node server.js --secure",                   result: "... [Port 443 Active]",  color: "#32383f" }, 
 ];
 
 export default function DevTerminal() {
