@@ -26,7 +26,9 @@ function Header() {
     <header id="head">
       <div className="head" ref={headRef}>
         <div className="head-icon">
-          <img alt="logo-icon" src="/avatar-icon.png" />
+          <a href="https://d1xter0.vercel.app" target="_blank" rel="noopener noreferrer">
+            <img alt="logo-icon" src="/avatar-icon.png" />
+          </a>
         </div>
 
         <div className="research-bar">
@@ -74,19 +76,34 @@ function Header() {
             <button className="mobile-nav-btn" onClick={() => scrollTo("Home")}>
               {t("header.home")}
             </button>
-            <button className="mobile-nav-btn" onClick={() => scrollTo("About-Me")}>
+            <button
+              className="mobile-nav-btn"
+              onClick={() => scrollTo("About-Me")}
+            >
               {t("header.about")}
             </button>
-            <button className="mobile-nav-btn" onClick={() => scrollTo("Skills")}>
+            <button
+              className="mobile-nav-btn"
+              onClick={() => scrollTo("Skills")}
+            >
               {t("header.skills")}
             </button>
-            <button className="mobile-nav-btn" onClick={() => scrollTo("Projects")}>
+            <button
+              className="mobile-nav-btn"
+              onClick={() => scrollTo("Projects")}
+            >
               {t("header.projects")}
             </button>
-            <button className="mobile-nav-btn" onClick={() => scrollTo("Career")}>
+            <button
+              className="mobile-nav-btn"
+              onClick={() => scrollTo("Career")}
+            >
               {t("header.career")}
             </button>
-            <button className="mobile-nav-btn" onClick={() => scrollTo("Contact")}>
+            <button
+              className="mobile-nav-btn"
+              onClick={() => scrollTo("Contact")}
+            >
               {t("header.contact")}
             </button>
           </nav>

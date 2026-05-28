@@ -57,7 +57,7 @@ function App() {
         <section className="gsap-section" aria-label="Introduction">
           <div className="hero-layout" id="Home">
             <div className="l-read">
-              <h1>D1XTER0</h1>
+              <h1>{t("home.title")}</h1>
               <p>{t("home.subtitle")}</p>
               <a
                 className="sociale"

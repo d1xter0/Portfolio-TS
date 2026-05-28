@@ -9,10 +9,10 @@
     "contact": "Contact"
   },
   "home": {
-    "title": "D1XTER0",
+    "title": "OUASSIM",
     "subtitle": "Développeur web Full Stack · Passionné de cybersécurité",
-    "why_title": "Pourquoi D1XTER0 ?",
-    "why_description": "Je développe des applications web modernes, évolutives et sécurisées — de l’UI/UX jusqu’au frontend et backend.",
+    "why_title": "Donner vie à vos visions numériques",
+    "why_description": "Je développe des applications web modernes, évolutives et sécurisées · de l’UI/UX jusqu’au frontend et backend",
     "why_link": "applications web"
   },
   "agofla": {
@@ -24,8 +24,8 @@
   },
   "about": {
     "name": "Ouassim Sihamda",
-    "description": "Développeur web avec un an d’expérience, titulaire de la certification Cisco Certified Network Associate (CCNA) et étudiant en informatique à l’Université Saad Dahleb de Blida. Toujours motivé à apprendre, progresser et saisir de nouvelles opportunités.",
-    "goal": "Mon objectif est d’élargir continuellement mes connaissances, d’améliorer mes compétences et de me préparer à une carrière en cybersécurité tout en découvrant",
+    "description": "Je suis un développeur Web full-stack qui étudie actuellement l’informatique à l’Université Saad Dahleb de Blida. Parallèlement à mon parcours académique, je détiens une certification Cisco Certified Network Associate (CCNA) et j’ai toujours hâte d’apprendre, de grandir et de saisir de nouvelles opportunités.",
+    "goal": "Mon objectif est d’élargir continuellement mes connaissances, d’améliorer mes compétences et de me préparer à une carrière dans la cybersécurité tout en maîtrisant",
     "goal_link": "de nouvelles technologies"
   },
   "skills": {
@@ -51,17 +51,17 @@
   "career": {
     "title": "Parcours professionnel & académique",
     "professional": "Professionnel",
-    "professional_period": "2025 · À présent",
+    "professional_period": "2026 · À présent",
     "academic": "Académique",
     "academic_period": "2024 · À présent",
-    "card1_title": "Développeur Full Stack Junior | À la recherche d’opportunités",
+    "card1_title": "Développeur Full Stack | À la recherche d’opportunités",
     "card1_description": "Développement actif de projets Full Stack concrets et recherche d’un poste junior ou d’un stage afin d’acquérir une expérience professionnelle.",
     "card1_date": "Jan 2026 – Présent",
     "card2_title": "Étudiant en informatique",
-    "card2_description": "Étudiant en première année d’informatique à l’Université Saad Dahleb de Blida, avec une solide base en génie logiciel.",
+    "card2_description": "Étudier l’informatique à l’Université Saad Dahleb de Blida, en construisant une base rigoureuse en ingénierie logicielle, algorithmes et architectures informatiques fondamentales.",
     "card2_date": "Oct 2024 – Présent",
-    "card3_title": "Cisco Certified Network Associate (CCNA)",
-    "card3_description": "Étude approfondie des fondamentaux des réseaux, et sécurité des réseaux.",
+    "card3_title": "Cisco Certified Network Associate",
+    "card3_description": "Expertise validée en matière de principes fondamentaux du réseau, de routage et de commutation, de connectivité IP et de protocoles de sécurité réseau fondamentaux.",
     "card3_date": "Oct 2025 – Présent"
   },
   "contact": {
