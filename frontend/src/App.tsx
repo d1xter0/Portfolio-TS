@@ -9,6 +9,7 @@ import DevTerminal from "../components/DevTerminal";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Analytics } from "@vercel/analytics/next";
 
 function App() {
   const { t } = useTranslation();
@@ -52,6 +53,7 @@ function App() {
 
   return (
     <>
+      <Analytics/>
       <Header />
 
       <main>
