@@ -131,12 +131,28 @@ export default function DevTerminal() {
       aria-label="Live terminal displaying cybersecurity and development commands"
     >
       <div className="dt-header" aria-hidden="true">
+        <div className="dt-header-icon">
+          <span className="dt-icon-symbol">$_</span>
+        </div>
+        <span className="dt-title">d1xter0@kali: ~</span>
         <div className="dt-controls">
           <span className="dt-ctrl" />
           <span className="dt-ctrl" />
-          <span className="dt-ctrl" />
+          <span className="dt-ctrl dt-ctrl--close">
+            <svg width="6" height="6" viewBox="0 0 6 6" fill="none" aria-hidden="true">
+              <line x1="0.5" y1="0.5" x2="5.5" y2="5.5" stroke="white" strokeWidth="1.4" strokeLinecap="round" />
+              <line x1="5.5" y1="0.5" x2="0.5" y2="5.5" stroke="white" strokeWidth="1.4" strokeLinecap="round" />
+            </svg>
+          </span>
         </div>
-        <span className="dt-title">bash</span>
+      </div>
+
+      <div className="dt-menu" aria-hidden="true">
+        <span>Session</span>
+        <span>Actions</span>
+        <span>Edit</span>
+        <span>View</span>
+        <span>Help</span>
       </div>
 
       <div className="dt-screen">
