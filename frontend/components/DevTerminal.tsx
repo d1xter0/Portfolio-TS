@@ -9,17 +9,41 @@ const MAX_HISTORY = 3;
 interface Cmd {
   cmd: string;
   result: string;
-  color: string;
 }
 
 const COMMANDS: Cmd[] = [
-  { cmd: "ssh root@d1xter0.io -i ~/.ssh/id_ed25519",  result: "... [Connected]",       color: "#32383f" },
-  { cmd: "git push origin main --force-with-lease",   result: "... [Rejected]",         color: "#a11e1e" },
-  { cmd: "git pull --rebase origin main",             result: "... [OK]",               color: "#32383f" }, 
-  { cmd: "git push origin main --force-with-lease",   result: "... [Deployed]",         color: "#0b3119e1" }, 
-  { cmd: "docker build -t d1xter0/api:latest .",      result: "... [Image Ready]",      color: "#32383f" },
-  { cmd: "openssl verify -CAfile chain.pem cert.pem", result: "... [Authorized]",       color: "#32383f" }, 
-  { cmd: "node server.js --secure",                   result: "... [Port 443 Active]",  color: "#32383f" }, 
+  {
+    cmd: "ssh root@wsim.dev -i ~/.ssh/id_ed25519",
+    result:
+      "Welcome to Ubuntu LTS! Last login: Thu May 28 20:14:15 from 192.168.1.2",
+  },
+  {
+    cmd: "git push origin main --force-with-lease",
+    result:
+      "To github.com:d1xter0/portfolio.git\n ! [rejected]        main -> main (fetch first)",
+  },
+  {
+    cmd: "git pull --rebase origin main",
+    result: "Successfully rebased and updated refs/heads/main.",
+  },
+  {
+    cmd: "git push origin main",
+    result:
+      "Counting objects: 100% (5/5), done.\n To github.com:d1xter0/portfolio.git\n   a1b2c3d..e5f6g7h  main -> main",
+  },
+  {
+    cmd: "docker build -t wsim/api:latest .",
+    result:
+      "Successfully built 3f6a91c2d4e8\nSuccessfully tagged wsim/api:latest",
+  },
+  {
+    cmd: "openssl verify -CAfile chain.pem cert.pem",
+    result: "cert.pem: OK",
+  },
+  {
+    cmd: "node server.js --secure",
+    result: "🚀 Production server running securely on https://localhost:443",
+  },
 ];
 
 export default function DevTerminal() {
@@ -28,9 +52,9 @@ export default function DevTerminal() {
   const [showResult, setShowResult] = useState(false);
   const [history, setHistory] = useState<Cmd[]>([]);
 
-  const activeRef  = useRef(false);
-  const timerRef   = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const cmdIdxRef  = useRef(0);
+  const activeRef = useRef(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const cmdIdxRef = useRef(0);
   const charIdxRef = useRef(0);
 
   useEffect(() => {
@@ -56,7 +80,7 @@ export default function DevTerminal() {
           timerRef.current = setTimeout(() => {
             if (!activeRef.current) return;
             const completed = COMMANDS[cmdIdxRef.current];
-            setHistory(prev => [...prev, completed].slice(-MAX_HISTORY));
+            setHistory((prev) => [...prev, completed].slice(-MAX_HISTORY));
             setCurrentText("");
             setShowResult(false);
             cmdIdxRef.current = (cmdIdxRef.current + 1) % COMMANDS.length;
@@ -86,7 +110,7 @@ export default function DevTerminal() {
           clearTimer();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     io.observe(wrap);
@@ -104,28 +128,40 @@ export default function DevTerminal() {
       ref={wrapRef}
       className="dev-terminal"
       role="img"
-      aria-label="Live terminal displaying cybersecurity and development commands being executed"
+      aria-label="Live terminal displaying cybersecurity and development commands"
     >
+      <div className="dt-header" aria-hidden="true">
+        <div className="dt-controls">
+          <span className="dt-ctrl" />
+          <span className="dt-ctrl" />
+          <span className="dt-ctrl" />
+        </div>
+        <span className="dt-title">bash</span>
+      </div>
+
       <div className="dt-screen">
         {history.map((item, i) => (
           <div key={i} className="dt-row dt-row--done">
-            <span className="dt-prompt">{"> "}</span>
-            <span className="dt-cmd">{item.cmd}</span>
-            <span className="dt-result" style={{ color: item.color }}>
-              {" " + item.result}
-            </span>
+            <div className="dt-cmdline">
+              <span className="dt-prompt">root@d1xter0:~# </span>
+              <span className="dt-cmd">{item.cmd}</span>
+            </div>
+            <span className="dt-result">{item.result}</span>
           </div>
         ))}
 
         <div className="dt-row dt-row--active">
-          <span className="dt-prompt">{"> "}</span>
-          <span className="dt-cmd">{currentText}</span>
-          {showResult ? (
-            <span className="dt-result" style={{ color: activeCmdEntry.color }}>
-              {" " + activeCmdEntry.result}
-            </span>
-          ) : (
-            <span className="dt-blink-cur" aria-hidden="true">_</span>
+          <div className="dt-cmdline">
+            <span className="dt-prompt">root@d1xter0:~# </span>
+            <span className="dt-cmd">{currentText}</span>
+            {!showResult && (
+              <span className="dt-blink-cur" aria-hidden="true">
+                _
+              </span>
+            )}
+          </div>
+          {showResult && (
+            <span className="dt-result">{activeCmdEntry.result}</span>
           )}
         </div>
       </div>
