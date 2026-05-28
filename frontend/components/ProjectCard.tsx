@@ -1,3 +1,4 @@
+// @ts-ignore: allow side-effect CSS import without type declarations
 import './styles/ProjectCard.css';
 
 type ProjectCardProps = {

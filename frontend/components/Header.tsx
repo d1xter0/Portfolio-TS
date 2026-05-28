@@ -1,3 +1,4 @@
+// @ts-ignore: allow side-effect CSS import without type declarations
 import "./styles/Header.css";
 import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
