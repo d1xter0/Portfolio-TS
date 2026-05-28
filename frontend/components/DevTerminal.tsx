@@ -42,7 +42,7 @@ const COMMANDS: Cmd[] = [
   },
   {
     cmd: "node server.js --secure",
-    result: "🚀 Production server running securely on https://localhost:443",
+    result: "Production server running securely on https://localhost:443",
   },
 ];
 
