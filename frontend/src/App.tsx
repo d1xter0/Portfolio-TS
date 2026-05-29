@@ -99,7 +99,7 @@ function App() {
             </div>
 
             <div className="logo">
-              <img alt="Ouassim Sihamda" src="hero-avatar-2.svg" />
+              <img alt="Ouassim Sihamda" src="hero-avatar.png" />
             </div>
 
             <div className="r-read">
