@@ -32,7 +32,7 @@ function Header() {
           </a>
         </div>
 
-        <div className="research-bar">
+        <nav className="research-bar" aria-label="Main navigation">
           <button className="status-btn" onClick={() => scrollTo("Career")}>
             <div className="status-dot" />
             {t("header.status")}
@@ -56,7 +56,9 @@ function Header() {
           <button className="head-btn" onClick={() => scrollTo("Contact")}>
             {t("header.contact")}
           </button>
+        </nav>
 
+        <div className="head-actions">
           <div className="lang-divider" aria-hidden="true" />
           <LanguageSwitcher />
 

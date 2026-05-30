@@ -97,14 +97,29 @@ button:focus-visible {
   padding: 0.5rem;
 }
 
+/* ── Three-part centering: equal-weight flanks force .research-bar to dead-center ── */
+.head-icon {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.head-actions {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
 .head-icon img {
   width: 35px;
   height: 35px;
-  margin-inline-start: 10px;
-  margin-top: 5px;
+  margin-inline-start: 6px;
 }
 
 .research-bar {
+  flex: 0 0 auto;
   display: flex;
   gap: 10px;
   align-items: center;
@@ -417,6 +432,10 @@ button:focus-visible {
     gap: 6px;
   }
 
+  .head-actions {
+    gap: 6px;
+  }
+
   .lang-switcher-btn {
     font-size: 12px;
     padding: 5px 10px 5px 8px;
@@ -426,7 +445,6 @@ button:focus-visible {
     width: 28px;
     height: 28px;
     margin-inline-start: 2px;
-    margin-top: 0;
   }
 
   .lang-divider {

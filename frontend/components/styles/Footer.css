@@ -9,6 +9,7 @@ h5 {
   color: var(--btn-color);
   cursor: pointer;
   font-size: 14px;
+  margin-top: -80px;
   margin-bottom: 50px;
 }
 

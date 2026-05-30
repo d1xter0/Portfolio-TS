@@ -17,8 +17,8 @@
 }
 
 .l-read {
-  height: auto;
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
   max-width: 420px;
   text-align: left;
 }
@@ -28,6 +28,7 @@
   font-weight: 1000;
   line-height: 1.15;
   margin-bottom: 10px;
+  text-wrap: balance;
 }
 
 .l-read p {
@@ -62,11 +63,9 @@
 }
 
 .logo {
-  width: min(560px, 38vw);
+  flex: 0 0 min(560px, 38vw);
   aspect-ratio: 1;
-  flex-shrink: 0;
   border-radius: 20px;
-  /* overflow: hidden removed — orbital badges must not be clipped */
   transition: transform 800ms ease;
 }
 
@@ -120,6 +119,7 @@
   left: 0;
   width: 15.5%;
   height: 15.5%;
+  z-index: 3;
   will-change: transform, opacity;
   pointer-events: none;
   filter: drop-shadow(0 2px 10px rgba(123, 74, 226, 0.4));
@@ -133,8 +133,8 @@
 }
 
 .r-read {
-  height: auto;
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
   max-width: 420px;
   text-align: left;
 }
@@ -841,6 +841,7 @@
   }
 
   .logo {
+    flex: 0 0 auto;
     width: min(85vw, 340px);
     aspect-ratio: 1;
     margin: 0 auto;

@@ -45,25 +45,25 @@ export default function OrbitalHero() {
 
         const θ    = angleRef.current + ORBIT_ICONS[i].phase;
         const sinθ = Math.sin(θ);
-        const t    = (1 - sinθ) * 0.5; // 1 = top arc (large/visible), 0 = bottom arc (small/hidden)
+        const t    = (1 - sinθ) * 0.5; // 1 = top arc (large), 0 = bottom arc (small)
 
-        // ── Opacity mask ──
-        // Top half (sinθ ≤ 0): fully opaque — badge is above and in front.
-        // Bottom half (sinθ > 0): quadratic power-law falloff to absolute zero
-        // at the bottom of the arc (sinθ = +1). C⁰-continuous at sinθ = 0:
-        // lim sinθ→0⁺ of (1−sinθ)² = 1.0, matching the top-half constant.
-        const opacity = sinθ <= 0
-          ? 1.0
-          : Math.pow(1 - sinθ, 2.0);
+        // ── Smoothstep opacity ────────────────────────────────────────────────
+        // Clamp sinθ to the lower hemisphere [0, 1], then apply the cubic
+        // smoothstep  S(x) = x²(3 − 2x).  This gives:
+        //   sinθ ≤ 0  →  opacity = 1.0  (upper arc: fully visible)
+        //   sinθ = 0  →  opacity = 1.0, slope = 0  (C¹-continuous horizon)
+        //   sinθ = 1  →  opacity = 0.0  (bottom: fully hidden)
+        // Zero slope at both ends of the transition eliminates the kink that
+        // a power-law or piecewise falloff introduces at the equatorial crossing.
+        const lower   = Math.max(0, sinθ);
+        const opacity = 0.95 - lower * lower * (3 - 2 * lower);
 
         const scale = SCALE_MIN + t * (SCALE_MAX - SCALE_MIN);
         const x     = cx + rx * Math.cos(θ) - half;
         const y     = cy + ry * sinθ        - half;
 
-        // Direct style mutations — avoids GSAP object allocation per frame
         el.style.transform = `translate3d(${x.toFixed(3)}px,${y.toFixed(3)}px,0) scale(${scale.toFixed(3)})`;
         el.style.opacity   = opacity.toFixed(3);
-        el.style.zIndex    = sinθ < 0 ? "3" : "1";
       }
     };
 
@@ -91,7 +91,7 @@ export default function OrbitalHero() {
         />
       </svg>
 
-      {/* Avatar — z-index 2: badges flip between 1 (behind) and 3 (in front) */}
+      {/* Avatar — z-index 2; badges are fixed at z-index 3 (CSS), depth is conveyed by opacity alone */}
       <div className="orbital-avatar">
         <img src="hero-avatar.svg" alt="" aria-hidden="true" />
       </div>
