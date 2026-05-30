@@ -385,8 +385,14 @@
 /* ========= skills CSS ========= */
 .skills {
   text-align: center;
-  margin-bottom: 168px;
+  margin-bottom: 100px;
   padding-inline: 24px;
+}
+
+/* Constrain content width to match the .line boundary (1100px) */
+.skills > section {
+  max-width: 1100px;
+  margin-inline: auto;
 }
 
 .skills h2 {
@@ -453,6 +459,113 @@
 .skills img:hover {
   transform: translateY(-6px) scale(1.1);
   filter: drop-shadow(0 14px 30px rgba(123, 74, 226, 0.2));
+}
+
+/* ========= marquee CSS ========= */
+@keyframes mq-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/*
+ * max-width MUST be < set_width (N × item_footprint) to prevent a blank-frame
+ * snap at the loop reset. Item footprint = 47px icon + 32px gap = 79px.
+ * Row 1: 8 × 79 = 632px → max-width capped at 600px (32px safety margin).
+ * Row 2: 5 × 79 = 395px → max-width capped at 360px (35px safety margin).
+ */
+.mq-wrap {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin-inline: auto;
+  margin-bottom: 8px;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+}
+
+.mq-wrap2 {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  margin-inline: auto;
+  margin-bottom: 8px;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+}
+
+/* Guarantee the animation never pauses on hover — covers both wrappers */
+.mq-wrap:hover .mq-track,
+.mq-wrap2:hover .mq-track {
+  animation-play-state: running;
+}
+
+/* Scrolling track — width: max-content lets it size to all icons */
+.mq-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.mq-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 6px 32px 6px 0;
+}
+
+/* Reset inherited .skills img margins; marquee spacing comes from padding-right */
+.mq-item img {
+  width: 47px;
+  height: 47px;
+  margin: 0;
+  display: block;
+  transform-origin: center center;
+  will-change: transform;
+  transition: transform 0.3s ease;
+}
+
+/* Per-icon hover: scale only — marquee keeps running (no animation-play-state) */
+.skills .mq-item:hover img {
+  transform: scale(1.1);
+  filter: none;
+}
+
+/* Row 1 (8 icons × 79 px = 632 px/set) at ~45 px/s → 14 s */
+.mq-track--speed1 { animation: mq-scroll 14s linear infinite; }
+
+/* Row 2 (5 icons × 79 px = 395 px/set) at ~44 px/s → 9 s */
+.mq-track--speed2 { animation: mq-scroll 9s linear infinite; }
+
+/* Respect system reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .mq-track { animation: none; }
 }
 
 /* ========= projects CSS ========= */
@@ -895,18 +1008,70 @@
     margin: 0 auto;
   }
 
-  .skills-row {
-    display: flex !important;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+  /* Marquee — scrolling preserved on mobile, scaled for narrow viewports */
+  /*
+   * Mobile set widths (32px icon + 16px gap = 48px/item):
+   *   Row 1: 8 × 48 = 384 px → max-width: 100% (~343 px on 375 px phone) < 384 px ✓
+   *   Row 2: 5 × 48 = 240 px → max-width: 220 px < 240 px ✓
+   */
+  .mq-wrap {
+    max-width: 100%;
+    margin-inline: 0;
+    /* Tighter fade stops for narrower mobile container */
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
   }
 
-  .skills img {
-    width: 42px;
-    height: 42px;
-    margin: 8px 6px 0;
+  .mq-wrap2 {
+    max-width: 220px;
+    margin-inline: auto;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
   }
+
+  /* 40 px icon + 16 px gap = 56 px/item; 4 px block gives scale(1.1) clearance */
+  .mq-item {
+    padding: 4px 16px 4px 0;
+  }
+
+  .mq-item img,
+  .skills img {
+    width: 40px;
+    height: 40px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    margin: 0;
+  }
+
+  /* Mobile scroll velocity — 40px icon + 16px gap = 56px/item */
+  /* Row 1: 8 × 56 = 448 px/set ÷ ~38 px/s → 12 s */
+  .mq-track--speed1 { animation-duration: 12s; }
+  /* Row 2: 5 × 56 = 280 px/set ÷ ~40 px/s → 7 s */
+  .mq-track--speed2 { animation-duration: 7s; }
 
   /* ── Projects ── */
   .projects {

@@ -33,15 +33,14 @@ function App() {
         });
       });
 
-      gsap.from(".skills img", {
+      gsap.from(".skills .mq-item:not(.mq-item--dup) img", {
         opacity: 0,
-        scale: 1,
         stagger: 0.08,
         duration: 0.5,
         ease: "back.out(1.7)",
         clearProps: "all",
         scrollTrigger: {
-          trigger: ".skills-row",
+          trigger: ".skills .mq-wrap",
           start: "top 95%",
         },
       });
@@ -228,25 +227,45 @@ function App() {
 
               <h3>{t("skills.constant_techs")}</h3>
 
-              <div className="skills-row">
-                <img src="/react-icon.svg" alt="React" />
-                <img src="/typescript-icon.svg" alt="TypeScript" />
-                <img src="/js-icon.svg" alt="JavaScript" />
-                <img src="/nodejs-icon.svg" alt="Node.js" />
-                <img src="/git-icon.svg" alt="Git" />
-                <img src="/github-icon.svg" alt="GitHub" />
-                <img src="/html5-icon.svg" alt="HTML5" />
-                <img src="/css-icon.svg" alt="CSS3" />
+              {/* Marquee 1 — constant techs, icons doubled for seamless loop */}
+              <div className="mq-wrap">
+                <div className="mq-track mq-track--speed1">
+                  <span className="mq-item"><img src="/react-icon.svg"      alt="React" /></span>
+                  <span className="mq-item"><img src="/typescript-icon.svg" alt="TypeScript" /></span>
+                  <span className="mq-item"><img src="/js-icon.svg"         alt="JavaScript" /></span>
+                  <span className="mq-item"><img src="/nodejs-icon.svg"     alt="Node.js" /></span>
+                  <span className="mq-item"><img src="/git-icon.svg"        alt="Git" /></span>
+                  <span className="mq-item"><img src="/github-icon.svg"     alt="GitHub" /></span>
+                  <span className="mq-item"><img src="/html5-icon.svg"      alt="HTML5" /></span>
+                  <span className="mq-item"><img src="/css-icon.svg"        alt="CSS3" /></span>
+                  {/* Duplicate set — hidden from a11y, hides on mobile */}
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/react-icon.svg"      alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/typescript-icon.svg" alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/js-icon.svg"         alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/nodejs-icon.svg"     alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/git-icon.svg"        alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/github-icon.svg"     alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/html5-icon.svg"      alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/css-icon.svg"        alt="" /></span>
+                </div>
               </div>
 
               <h3>{t("skills.production_techs")}</h3>
 
-              <div className="skills-row">
-                <img src="/postgres-icon.svg" alt="PostgreSQL" />
-                <img src="/mysql-icon.svg" alt="MySQL" />
-                <img src="/tailwind-icon.svg" alt="Tailwind CSS" />
-                <img src="/figma-icon.svg" alt="Figma" />
-                <img src="/vercel.svg" alt="Vercel" />
+              {/* Marquee 2 — production techs */}
+              <div className="mq-wrap2">
+                <div className="mq-track mq-track--speed2">
+                  <span className="mq-item"><img src="/postgres-icon.svg" alt="PostgreSQL" /></span>
+                  <span className="mq-item"><img src="/mysql-icon.svg"    alt="MySQL" /></span>
+                  <span className="mq-item"><img src="/tailwind-icon.svg" alt="Tailwind CSS" /></span>
+                  <span className="mq-item"><img src="/figma-icon.svg"    alt="Figma" /></span>
+                  <span className="mq-item"><img src="/vercel.svg"        alt="Vercel" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/postgres-icon.svg" alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/mysql-icon.svg"    alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/tailwind-icon.svg" alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/figma-icon.svg"    alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/vercel.svg"        alt="" /></span>
+                </div>
               </div>
             </section>
           </div>

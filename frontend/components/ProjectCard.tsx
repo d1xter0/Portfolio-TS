@@ -1,3 +1,4 @@
+// @ts-ignore: allow importing CSS side effects without module declarations
 import "./styles/ProjectCard.css";
 import { useState, useEffect, useRef, useCallback } from "react";
 
