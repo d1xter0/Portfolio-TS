@@ -33,6 +33,7 @@ span {
 }
 
 html {
+  font-size: 17px;
   overflow-x: clip;
   scroll-padding-top: 90px;
 }

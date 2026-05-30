@@ -6,6 +6,7 @@ import Agofla from "../components/Agofla";
 import ProjectCard from "../components/ProjectCard";
 import ActiveCareerCard from "../components/ActiveCareerCard";
 import DevTerminal from "../components/DevTerminal";
+import OrbitalHero from "../components/OrbitalHero";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -99,7 +100,7 @@ function App() {
             </div>
 
             <div className="logo">
-              <img alt="Ouassim Sihamda" src="hero-avatar.png" />
+              <OrbitalHero />
             </div>
 
             <div className="r-read">
