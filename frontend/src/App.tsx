@@ -126,6 +126,7 @@ function App() {
           </div>
         </section>
 
+        {/* 
         <section className="gsap-section" aria-labelledby="about-heading">
           <div id="About-Me">
             <div className="line" />
@@ -157,7 +158,7 @@ function App() {
               </p>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="gsap-section" aria-labelledby="skills-heading">
           <div id="Skills">

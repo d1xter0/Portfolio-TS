@@ -41,9 +41,9 @@ function Header() {
           <button className="head-btn" onClick={() => scrollTo("Home")}>
             {t("header.home")}
           </button>
-          <button className="head-btn" onClick={() => scrollTo("About-Me")}>
+          {/* <button className="head-btn" onClick={() => scrollTo("About-Me")}>
             {t("header.about")}
-          </button>
+          </button> */}
           <button className="head-btn" onClick={() => scrollTo("Skills")}>
             {t("header.skills")}
           </button>
