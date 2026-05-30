@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import Agofla from "../components/Agofla";
 import ProjectCard from "../components/ProjectCard";
 import ActiveCareerCard from "../components/ActiveCareerCard";
-import DevTerminal from "../components/DevTerminal";
+//import DevTerminal from "../components/DevTerminal";
 import OrbitalHero from "../components/OrbitalHero";
 import { useEffect } from "react";
 import { gsap } from "gsap";
@@ -13,7 +13,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function App() {
   const { t } = useTranslation();
-
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -261,57 +260,57 @@ function App() {
           <div className="projects">
             <h2 id="projects-heading">{t("projects.title")}</h2>
 
-            <div className="card-s">
-              <ProjectCard
-                pic="/portfolio.png"
-                title={t("projects.portfolio_title")}
-                description={t("projects.portfolio_description")}
-                techs={["React", "Typescript"]}
-                links="https://d1xter0.vercel.app"
-              />
-              <ProjectCard
-                pic="/bendouha-shop.png"
-                title={t("projects.bendouha_title")}
-                description={t("projects.bendouha_description")}
-                techs={[
-                  "React",
-                  "Next.js",
-                  "Typescript",
-                  "Nest.js",
-                  "PostgreSQL",
-                  "Prisma",
-                  "REST API",
-                  "TailwindCSS",
-                ]}
-                links="https://www.bendouha.com"
-              />
-              <ProjectCard
-                pic="/ssp-studio.png"
-                title={t("projects.ssp_title")}
-                description={t("projects.ssp_description")}
-                techs={[
-                  "React",
-                  "Next.js",
-                  "Typescript",
-                  "TailwindCSS",
-                  "Framer Motion",
-                ]}
-                links="https://www.sspstudio.com"
-              />
-              <ProjectCard
-                pic="/lamsa.png"
-                title={t("projects.lamsa_title")}
-                description={t("projects.lamsa_description")}
-                techs={[
-                  "React",
-                  "Next.js",
-                  "Typescript",
-                  "TailwindCSS",
-                  "Framer Motion",
-                ]}
-                links="https://lamsa-communication.vercel.app"
-              />
-            </div>
+            {(() => {
+              const projectData = [
+                {
+                  pic: "/portfolio.png",
+                  title: t("projects.portfolio_title"),
+                  description: t("projects.portfolio_description"),
+                  techs: ["React", "TypeScript"],
+                  links: "https://d1xter0.vercel.app",
+                },
+                {
+                  pic: "/bendouha-shop.png",
+                  title: t("projects.bendouha_title"),
+                  description: t("projects.bendouha_description"),
+                  techs: ["React", "Next.js", "TypeScript", "Nest.js", "PostgreSQL", "Prisma", "REST API", "TailwindCSS"],
+                  links: "https://www.bendouha.com",
+                },
+                {
+                  pic: "/ssp-studio.png",
+                  title: t("projects.ssp_title"),
+                  description: t("projects.ssp_description"),
+                  techs: ["React", "Next.js", "TypeScript", "TailwindCSS", "Framer Motion"],
+                  links: "https://www.sspstudio.com",
+                },
+                {
+                  pic: "/lamsa.png",
+                  title: t("projects.lamsa_title"),
+                  description: t("projects.lamsa_description"),
+                  techs: ["React", "Next.js", "TypeScript", "TailwindCSS", "Framer Motion"],
+                  links: "https://lamsa-communication.vercel.app",
+                },
+              ];
+              return (
+                <>
+                  {/* ── Desktop: 4-column grid ── */}
+                  <div className="card-s">
+                    {projectData.map((p) => (
+                      <ProjectCard key={p.links} {...p} />
+                    ))}
+                  </div>
+
+                  {/* ── Mobile: all projects stacked, no pagination ── */}
+                  <div className="pc-mobile">
+                    <div className="pc-mobile-stack">
+                      {projectData.map((p) => (
+                        <ProjectCard key={p.links} {...p} />
+                      ))}
+                    </div>
+                  </div>
+                </>
+              );
+            })()}
 
             <div className="cent">
               <a

@@ -469,22 +469,25 @@
   font-weight: 1000;
 }
 
+/* ── Desktop: 4-column portrait grid ── */
 .projects .card-s {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 48px;
-  max-width: 1200px;
+  gap: 20px;
+  max-width: 1280px;
   margin: 0 auto;
-  justify-items: center;
 }
+
+/* ── Mobile carousel: hidden on desktop ── */
+.pc-mobile { display: none; }
 
 .projects .cent {
   display: flex;
   justify-content: center;
 }
 
-.projects button {
-  margin-top: 120px;
+.projects .cent button {
+  margin-top: 72px;
   padding: 10px 16px;
   border: 1px solid rgb(74, 226, 144);
   border-radius: 16px;
@@ -499,9 +502,9 @@
   gap: 6px;
 }
 
-.projects button:hover {
-  border: 1px solid rgba(74, 226, 145, 0.534);
-  color: rgba(74, 226, 145, 0.534);
+.projects .cent button:hover {
+  border-color: rgba(74, 226, 145, 0.5);
+  color: rgba(74, 226, 145, 0.5);
 }
 
 .projects .pro-img {
@@ -528,7 +531,7 @@
   transform: scaleX(-1);
 }
 
-.projects button:hover img {
+.projects .cent button:hover img {
   filter: brightness(0) saturate(100%) invert(60%) sepia(40%) saturate(500%)
     hue-rotate(90deg) brightness(95%) contrast(90%);
 }
@@ -915,11 +918,18 @@
     margin-bottom: 24px;
   }
 
-  .projects .card-s {
-    grid-template-columns: 1fr;
+  /* Hide desktop grid on mobile */
+  .projects .card-s { display: none; }
+
+  /* ── Mobile: all projects stacked vertically ── */
+  .pc-mobile {
+    display: block;
+  }
+
+  .pc-mobile-stack {
+    display: flex;
+    flex-direction: column;
     gap: 16px;
-    max-width: 100%;
-    justify-items: stretch;
   }
 
   .projects .cent a {
@@ -929,7 +939,7 @@
     text-decoration: none;
   }
 
-  .projects button {
+  .projects .cent button {
     width: auto;
     max-width: 340px;
     margin-top: 40px;
