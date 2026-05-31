@@ -282,13 +282,6 @@ function App() {
             {(() => {
               const projectData = [
                 {
-                  pic: "/portfolio.png",
-                  title: t("projects.portfolio_title"),
-                  description: t("projects.portfolio_description"),
-                  techs: ["React", "TypeScript"],
-                  links: "https://d1xter0.vercel.app",
-                },
-                {
                   pic: "/bendouha-shop.png",
                   title: t("projects.bendouha_title"),
                   description: t("projects.bendouha_description"),
