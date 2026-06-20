@@ -302,6 +302,13 @@ function App() {
                   techs: ["React", "Next.js", "TypeScript", "TailwindCSS", "Framer Motion"],
                   links: "https://lamsa-communication.vercel.app",
                 },
+                {
+                  pic: "/mobile-art.png",
+                  title: t("projects.mobile_title"),
+                  description: t("projects.mobile_description"),
+                  techs: ["React", "Next.js", "TypeScript", "Nest.js", "Supabase", "TypeORM", "TailwindCSS"],
+                  links: "",
+                },
               ];
               return (
                 <>
@@ -675,7 +682,7 @@ function App() {
                       </svg>
                     </button>
                   </a>
-                  <a href="https://www.fiverr.com/d1xter0" aria-disabled="true">
+                  <a href="https://www.fiverr.com/s/qDWYz45" aria-disabled="true">
                     <button>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

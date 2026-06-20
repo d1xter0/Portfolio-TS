@@ -46,7 +46,10 @@
     "ssp_title": "SSP Studio",
     "ssp_description": "Un site web de studio moderne conçu pour mettre en valeur les services, le portefeuille et les demandes des clients, avec un fort accent sur l’expérience utilisateur, la réactivité et la conversion des pistes.",
     "lamsa_title": "Lamsa Communication",
-    "lamsa_description": "Un site web élégant et moderne pour une agence de communication, conçu pour présenter leurs services, leur portefeuille et les témoignages de clients tout en offrant une expérience utilisateur engageante."
+    "lamsa_description": "Un site web élégant et moderne pour une agence de communication, conçu pour présenter leurs services, leur portefeuille et les témoignages de clients tout en offrant une expérience utilisateur engageante.",
+    "mobile_title": "Mobile Art",
+    "mobile_description": "Application web full-stack pour une ferronnerie, permettant de gérer et calculer les commandes, les achats, les dépenses, les frais véhicule, le stock et les analytiques — avec un tableau de bord admin sécurisé et une interface responsive."
+
   },
   "career": {
     "title": "Parcours professionnel & académique",
