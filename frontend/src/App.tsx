@@ -116,7 +116,7 @@ function App() {
                   }}
                 >
                   {t("home.why_link")}
-                  
+
                 </a>
                 {t("home.why_description").split(t("home.why_link"))[1]}
               </p>
@@ -230,23 +230,23 @@ function App() {
               {/* Marquee 1 — constant techs, icons doubled for seamless loop */}
               <div className="mq-wrap">
                 <div className="mq-track mq-track--speed1">
-                  <span className="mq-item"><img src="/react-icon.svg"      alt="React" /></span>
+                  <span className="mq-item"><img src="/react-icon.svg" alt="React" /></span>
                   <span className="mq-item"><img src="/typescript-icon.svg" alt="TypeScript" /></span>
-                  <span className="mq-item"><img src="/js-icon.svg"         alt="JavaScript" /></span>
-                  <span className="mq-item"><img src="/nodejs-icon.svg"     alt="Node.js" /></span>
-                  <span className="mq-item"><img src="/git-icon.svg"        alt="Git" /></span>
-                  <span className="mq-item"><img src="/github-icon.svg"     alt="GitHub" /></span>
-                  <span className="mq-item"><img src="/html5-icon.svg"      alt="HTML5" /></span>
-                  <span className="mq-item"><img src="/css-icon.svg"        alt="CSS3" /></span>
+                  <span className="mq-item"><img src="/js-icon.svg" alt="JavaScript" /></span>
+                  <span className="mq-item"><img src="/nodejs-icon.svg" alt="Node.js" /></span>
+                  <span className="mq-item"><img src="/git-icon.svg" alt="Git" /></span>
+                  <span className="mq-item"><img src="/github-icon.svg" alt="GitHub" /></span>
+                  <span className="mq-item"><img src="/html5-icon.svg" alt="HTML5" /></span>
+                  <span className="mq-item"><img src="/css-icon.svg" alt="CSS3" /></span>
                   {/* Duplicate set — hidden from a11y, hides on mobile */}
-                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/react-icon.svg"      alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/react-icon.svg" alt="" /></span>
                   <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/typescript-icon.svg" alt="" /></span>
-                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/js-icon.svg"         alt="" /></span>
-                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/nodejs-icon.svg"     alt="" /></span>
-                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/git-icon.svg"        alt="" /></span>
-                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/github-icon.svg"     alt="" /></span>
-                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/html5-icon.svg"      alt="" /></span>
-                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/css-icon.svg"        alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/js-icon.svg" alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/nodejs-icon.svg" alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/git-icon.svg" alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/github-icon.svg" alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/html5-icon.svg" alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/css-icon.svg" alt="" /></span>
                 </div>
               </div>
 
@@ -256,15 +256,15 @@ function App() {
               <div className="mq-wrap2">
                 <div className="mq-track mq-track--speed2">
                   <span className="mq-item"><img src="/postgres-icon.svg" alt="PostgreSQL" /></span>
-                  <span className="mq-item"><img src="/mysql-icon.svg"    alt="MySQL" /></span>
+                  <span className="mq-item"><img src="/mysql-icon.svg" alt="MySQL" /></span>
                   <span className="mq-item"><img src="/tailwind-icon.svg" alt="Tailwind CSS" /></span>
-                  <span className="mq-item"><img src="/figma-icon.svg"    alt="Figma" /></span>
-                  <span className="mq-item"><img src="/vercel.svg"        alt="Vercel" /></span>
+                  <span className="mq-item"><img src="/figma-icon.svg" alt="Figma" /></span>
+                  <span className="mq-item"><img src="/vercel.svg" alt="Vercel" /></span>
                   <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/postgres-icon.svg" alt="" /></span>
-                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/mysql-icon.svg"    alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/mysql-icon.svg" alt="" /></span>
                   <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/tailwind-icon.svg" alt="" /></span>
-                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/figma-icon.svg"    alt="" /></span>
-                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/vercel.svg"        alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/figma-icon.svg" alt="" /></span>
+                  <span className="mq-item mq-item--dup" aria-hidden="true"><img src="/vercel.svg" alt="" /></span>
                 </div>
               </div>
             </section>
@@ -308,6 +308,13 @@ function App() {
                   description: t("projects.mobile_description"),
                   techs: ["React", "Next.js", "TypeScript", "Nest.js", "Supabase", "TypeORM", "TailwindCSS"],
                   links: "",
+                },
+                {
+                  pic: "/cnl-toffia.png",
+                  title: t("projects.cnl_title"),
+                  description: t("projects.cnl_description"),
+                  techs: ["React", "Next.js", "TypeScript", "TailwindCSS", "GSAP"],
+                  links: "https://cnl-toffia.vercel.app",
                 },
               ];
               return (

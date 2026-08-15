@@ -48,7 +48,9 @@
     "lamsa_title": "Lamsa Communication",
     "lamsa_description": "A sleek, modern website for a communication agency, designed to showcase their services, portfolio, and client testimonials while providing an engaging user experience.",
     "mobile_title": "Mobile Art",
-    "mobile_description": "Full-stack web application for a metalwork, allowing to manage and calculate orders, purchases, expenses, vehicle costs, stock and analytics - with a secure admin dashboard and a responsive interface."
+    "mobile_description": "Full-stack web application for a metalwork, allowing to manage and calculate orders, purchases, expenses, vehicle costs, stock and analytics - with a secure admin dashboard and a responsive interface.",
+    "cnl_title": "Toffia - CNL Caramel",
+    "cnl_description": "An immersive, modern web experience designed for a luxury confectionery brand. Developed with Next.js and Tailwind CSS, highlighting interactive 3D-like product displays and complex UI animations."
   },
   "career": {
     "title": "Career & Learning Journey",
